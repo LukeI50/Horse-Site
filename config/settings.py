@@ -33,7 +33,7 @@ else:
     DEBUG = False    
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-lukei50-horsesite-8mvvcyorgah.ws.codeinstitute-ide.net']
 
 
 # Application definition

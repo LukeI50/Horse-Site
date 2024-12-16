@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-8f98xazw&!(%x0+@ay39f7@)t#)a9-tbd4m0g)s(fyg#bzt2$r
 if os.path.isfile('env.py'):
     DEBUG = True
 else:
-    DEBUG = False    
+    DEBUG = False
 
 
 ALLOWED_HOSTS = []
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'equiworm',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

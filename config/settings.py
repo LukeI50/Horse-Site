@@ -50,7 +50,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by email
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
@@ -66,10 +66,10 @@ INSTALLED_APPS = [
     # allauth packages
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.microsoft',
-    'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.microsoft',
+    # 'allauth.socialaccount.providers.twitter',
 
     # Cloudinary
     'cloudinary_storage',

@@ -2,7 +2,6 @@
 
 <details>
 <summary>Installing Requirements</summary>
->>>>>>> main
 
 To install all requirements from requirements.txt run...
 `pip3 install -r requirements.txt`

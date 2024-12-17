@@ -33,7 +33,7 @@ If Psycopg2 fails install on environment, run
 3. [Project Planning](#)
     - [Agile](#agile)
     - [User Stories](#user-stories)
-    - [MoSCoW](#moscow)
+    - [MoSCoW Prioritisation](#moscow-prioritisation)
     - [Wireframing](#wireframing)
     - [Entity Relationship Diagrams](#entity-relationship-diagrams)
 
@@ -49,7 +49,6 @@ _Add outline of descisions made regarding Accessibililty and Responsiveness._
 
 The colour palette for this project was chosen by looking at different horse coat colours.
 
-<br>
 <details>  
   <summary>Horse coat image insipration</summary>    
       <img src="" alt="Horse coats">
@@ -58,7 +57,6 @@ The colour palette for this project was chosen by looking at different horse coa
 
 Ultimately, we ended up chosing the colours shown below. They were picked based on the Piebald horse coat colour with some additional off-white and gray colours to fill in gaps.
 
-<br>
 <details>  
   <summary>Colour Palette</summary>    
       <img src="" alt="Colour palette">
@@ -69,7 +67,6 @@ Ultimately, we ended up chosing the colours shown below. They were picked based 
 
 We started with a variety of fonts, sticking mainly to sans serif fonts for readability.
 
-<br>
 <details>  
   <summary>Font choices</summary>    
       <img src="" alt="Inital font choices">
@@ -88,7 +85,6 @@ Initial planning of the project was done using [Miro](https://miro.com). All col
 
 Following this we created a kanban style project board on GitHub and populated it with user stories.
 
-<br>
 <details>  
   <summary>Project Board</summary>    
       <img src="" alt="project board">
@@ -111,12 +107,26 @@ Acceptance Criteria 3:
 
 We applied agile methodology to our planning. In the intial stages the were no concrete commitments to non-essential choices. All essential parts of our project were decided upon early and we made those the focus of our work as we headed to our minimum viable product.
 
-__Iterations__
-<br>
+#### Iterations
 Given that this project represents only one sprint or interation we moved all of our _Must Have_ and _Should Have_ user stories to the to-do section of our project board. This ensured that, by the end of he project we would have an MVP which had full functionality for a user and could provide a useful service.
 
-__Collaboration__
-<br>
+#### Collaboration
 As we had a bried provided by an external client we listened and incorporated their ideas into the project while providing continous feedback on how we can realistically include the required features.
 
 Between the team we divided up work based on team member preference and made sure that we were all updated on eachothers progress. This allowed all developers to input ideas and suggest changes across the entire project.
+
+### User Stories
+
+_Copy user stories from [GitHub](https://github.com/users/LukeI50/projects/9)_
+
+### MoSCoW prioritisation
+
+All of our user stories were sorted using the MoSCow prioritisation system:
+
+__Must Have__: Features which form our MVP and without which the website would not function.
+
+__Should Have__: Important features which could be missed but should be attempted during this iteraiton.
+
+__Could Have__: Potential additions which would improve the project but aren't neccessary for the MVP.
+
+__Wont Have__: Features which we will not be including in this iteration of the project either because they are unimportant or represent an value 

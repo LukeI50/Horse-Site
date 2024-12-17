@@ -36,6 +36,7 @@ If Psycopg2 fails install on environment, run
     - [MoSCoW Prioritisation](#moscow-prioritisation)
     - [Wireframing](#wireframing)
     - [Entity Relationship Diagrams](#entity-relationship-diagrams)
+4. [Security and Cookies](#security-and-cookies)
 
 ## UX / UI
 
@@ -135,3 +136,14 @@ __Wont Have__: Features which will not be included in this iteration of the proj
 
 Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. We only used these wireframes as a general structure and as the development progressed we allowed them to change.
 
+_Wireframing images_
+
+### Entity Relationship Diagrams
+
+ERDs were created using _link_.
+
+_erd images_
+
+## Security and Cookies
+
+_Can include if neccessary_

@@ -37,6 +37,12 @@ If Psycopg2 fails install on environment, run
     - [Wireframing](#wireframing)
     - [Entity Relationship Diagrams](#entity-relationship-diagrams)
 4. [Security and Cookies](#security-and-cookies)
+5. [Features](#features)
+6. [Future Features](#future-features)
+7. [Languages and Frameworks](#languages-and-frameworks)
+    - [Languages](#languages)
+    - [Frameworks](#frameworks)
+    - [Tools and Resources](#tools-and-resources)
 
 ## UX / UI
 
@@ -147,3 +153,38 @@ _erd images_
 ## Security and Cookies
 
 _Can include if neccessary_
+
+## Features
+
+- _placeholder_
+- _placeholder_
+- _placeholder_
+- _placeholder_
+- _placeholder_
+
+## Future Features
+
+- _placeholder_
+- _placeholder_
+- _placeholder_
+- _placeholder_
+- _placeholder_
+
+## Languages and Frameworks
+
+### Languages
+
+- HTML
+- CSS
+- Python
+
+### Frameworks
+
+- Django
+- Bootstrap
+
+### Tools and Resources
+
+- _Placeholder_
+- _Placeholder_
+- _Placeholder_

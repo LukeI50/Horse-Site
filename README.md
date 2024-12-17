@@ -47,6 +47,8 @@ If Psycopg2 fails install on environment, run
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
     - [User Story Testing](#user-story-testing)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
 
 ## UX / UI
 
@@ -211,6 +213,23 @@ __[CSS Validator](https://jigsaw.w3.org/css-validator/)__
 
 ### Manual Testing
 
-Maual testing was done by simply navigating through the site and making sure that all areas were working as intended. We also passed the product to non-developers to ensure that the design was intuative and avoid issues of over familiarity with the project.
+Maual testing was done by simply navigating through the site and making sure that all areas were working as intended. We also passed the product to non-developers to ensure that the design was intuative and to avoid issues realted to over familiarity with the project.
 
 ### User Story Testing
+
+_Table with user story testing with PASS / FAIL values._
+
+## Deployment
+
+1. Create a new app on [Heroku](https://www.heroku.com/). Choose and app name and location. 
+2. Under the __deploy__ tab connect Heroku with your repository.
+3. In your development environment ensure that `debug` in django settings.py is set to `False` and all secret keys and database urls are hidden.
+4. Set appropiate variables in Settings > Config Vars in your Heroku project.
+5. On Heroku website under the deploy tab, select either automatic or manual deploys.
+6. Select which branch you want to deploy from, for example `Main`.
+7. Press Deploy and wait for Heroku to finish building the site.
+8. You can then open app from the deploy page or from the apps dashboard.
+
+## Credits
+
+_Credit info_

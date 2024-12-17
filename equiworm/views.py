@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def TestHome(request):
-    render(
+    return render(
         request,
         "equiworm/home.html",
     )

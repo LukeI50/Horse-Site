@@ -6,4 +6,14 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def TestHome(request):
-    return HttpResponse("This is the Home page")
+    return render(
+        request,
+        "equiworm/home.html",
+    )
+
+# Homepage
+
+# Blogposts Page
+
+# Quiz View - Paginate by Question - Or Do something slightly different but a little more complicated, maybe, to reduce having to reload the page
+

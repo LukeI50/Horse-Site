@@ -1,9 +1,56 @@
-<!-- index.html -->
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
 
-<!-- home content -->
+<!-------------------------------------------------- home content -->
+<div class="container mt-4">
+    <div class="row">
+        <!----------------------------------------- Left Section -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Something here</h5>
+                    <p class="card-text">What does this site contain, what general info can be found in each section.</p>
+                </div>
+                <img src="your-image-left.jpg" class="card-img-top" alt="Image for left section">
+            </div>
+        </div>
+
+        <!---------------------------------------- Center Section -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="#" class="card-img-top" alt="Image for center section">
+                <div class="card-body">
+                    <h5 class="card-title">Something Small</h5>
+                    <p class="card-text">Summer is the perfect time to indulge in some leisurely reading, whether it’s
+                        lying on the beach or lounging in the park. So, if you're looking for a way to unwind this
+                        summer, why not pick up a few books and escape into some captivating stories?</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------- Right Section -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Small Tittle</h5>
+                    <p class="card-text">Content</p>
+                </div>
+                <img src="#" class="card-img-top" alt="Image for right section">
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------- Risk Assessment Section -->
+    <div class="text-center mt-5">
+        <div class="card p-4">
+            <h5 class="card-title">Take Risk Assessment Now</h5>
+            <p class="card-text">Info about taking the risk test...
+            </p>
+            <a href="#" class="btn btn-primary">Take Test Now</a>
+        </div>
+    </div>
+</div>
 
 
 
@@ -11,4 +58,4 @@
 
 
 
-{% endblock %} 
+{% endblock %}

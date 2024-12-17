@@ -62,26 +62,26 @@ _Add outline of descisions made regarding Accessibililty and Responsiveness._
 
 The colour palette for this project was chosen by looking at different horse coat colours.
 
-<details>  
-  <summary>Horse coat image insipration</summary>    
+<details>
+  <summary>Horse coat image insipration</summary>
       <img src="" alt="Horse coats">
 </details>
 <br>
 
 We ended up chosing the colours shown below. They were picked based on the Piebald horse coat colour with some additional off-white and gray colours to fill in gaps.
 
-<details>  
-  <summary>Colour Palette</summary>    
+<details>
+  <summary>Colour Palette</summary>
       <img src="" alt="Colour palette">
 </details>
 <br>
 
-### Fonts 
+### Fonts
 
 We started with a variety of fonts, sticking mainly to sans serif fonts for readability.
 
-<details>  
-  <summary>Font choices</summary>    
+<details>
+  <summary>Font choices</summary>
       <img src="" alt="Inital font choices">
 </details>
 <br>
@@ -91,15 +91,15 @@ Eventually we chose __font choice__ as we felt that it maintained readability wh
 
 _Add summary box with image of final font choice_
 
-## Project planning 
+## Project planning
 
 
 Initial planning of the project was done using [Miro](https://miro.com). All colour palettes, wireframes and ERDs were posted there and developed over time.
 
 Following this we created a kanban style project board on GitHub and populated it with user stories.
 
-<details>  
-  <summary>Project Board</summary>    
+<details>
+  <summary>Project Board</summary>
       <img src="" alt="project board">
 </details>
 <br>
@@ -109,7 +109,7 @@ The user stories were created following a consistent style:
 ```
 As a (role) I can (ability) in order to (outcome).
 
-Acceptance Criteria 1:
+Acceptance Criteria 1: 
 
 Acceptance Criteria 2: 
 

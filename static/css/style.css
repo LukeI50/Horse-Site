@@ -4,10 +4,16 @@
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-style: bold;
+    font-size: 1.5rem;
 }
 
 .navbar-toggler {
     border: none;
+}
+
+.burger {
+    font-size: 1.5rem ;
+    
 }
 
 .navbar {

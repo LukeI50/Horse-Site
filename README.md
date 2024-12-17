@@ -26,7 +26,11 @@ If Psycopg2 fails install on environment, run
 ## Table of Contents
 
 1. [Equiworm](#equiworm)
-2. [UX / UI](#)
+2. [UX / UI](#ux--ui)
+    - [Accessibility and Responsiveness](#accessibililty-and-responsiveness)
+    - [Colour Palette](#colour-palette)
+    - [Fonts](#fonts)
+3. [Project Planning](#)
 
 ## UX / UI
 
@@ -43,7 +47,7 @@ The colour palette for this project was chosen by looking at different horse coa
 <br>
 <details>  
   <summary>Horse coat image insipration</summary>    
-      <img src="assets/readme_images/horse_colours.png">
+      <img src="" alt="Horse coat image">
 </details>
 <br>
 
@@ -52,7 +56,7 @@ Ultimately, we ended up chosing the colours shown below. They were picked based 
 <br>
 <details>  
   <summary>Colour Palette</summary>    
-      <img src="assets/readme_images/colour_palette.png">
+      <img src="" alt="Colour palette image">
 </details>
 <br>
 
@@ -62,12 +66,38 @@ We started with a variety of fonts, sticking mainly to sans serif fonts for read
 
 <br>
 <details>  
-  <summary>Colour Palette</summary>    
-      <img src="assets/readme_images/font_choices.png">
+  <summary>Font choices</summary>    
+      <img src="" alt="Inital font choices">
 </details>
 <br>
 
 Eventually we chose __font choice__ as we felt that it maintained readability while having a professional, trustworthy look.
 
 
-__Add summary box with image of final font choice__
+_Add summary box with image of final font choice_
+
+## Project planning 
+
+
+Initial planning of the project was done using [Miro](https://miro.com). All colour palettes, wireframes and ERDs were posted there and developed over time.
+
+Following this we created a kanban style project board on GitHub and populated it with user stories.
+
+<br>
+<details>  
+  <summary>Project Board</summary>    
+      <img src="">
+</details>
+<br>
+
+The user stories were created following a consistent style:
+ 
+```
+As a (role) I can (ability) in order to (outcome).
+
+Acceptance Criteria 1:
+
+Acceptance Criteria 2: 
+
+Acceptance Criteria 3: 
+```

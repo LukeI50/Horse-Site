@@ -31,6 +31,11 @@ If Psycopg2 fails install on environment, run
     - [Colour Palette](#colour-palette)
     - [Fonts](#fonts)
 3. [Project Planning](#)
+    - [Agile](#agile)
+    - [User Stories](#user-stories)
+    - [MoSCoW](#moscow)
+    - [Wireframing](#wireframing)
+    - [Entity Relationship Diagrams](#entity-relationship-diagrams)
 
 ## UX / UI
 
@@ -38,7 +43,7 @@ If Psycopg2 fails install on environment, run
 
 ### Accessibililty and Responsiveness
 
-
+_Add outline of descisions made regarding Accessibililty and Responsiveness._
 
 ### Colour Palette
 
@@ -47,7 +52,7 @@ The colour palette for this project was chosen by looking at different horse coa
 <br>
 <details>  
   <summary>Horse coat image insipration</summary>    
-      <img src="" alt="Horse coat image">
+      <img src="" alt="Horse coats">
 </details>
 <br>
 
@@ -56,7 +61,7 @@ Ultimately, we ended up chosing the colours shown below. They were picked based 
 <br>
 <details>  
   <summary>Colour Palette</summary>    
-      <img src="" alt="Colour palette image">
+      <img src="" alt="Colour palette">
 </details>
 <br>
 
@@ -86,12 +91,12 @@ Following this we created a kanban style project board on GitHub and populated i
 <br>
 <details>  
   <summary>Project Board</summary>    
-      <img src="">
+      <img src="" alt="project board">
 </details>
 <br>
 
 The user stories were created following a consistent style:
- 
+
 ```
 As a (role) I can (ability) in order to (outcome).
 
@@ -101,3 +106,17 @@ Acceptance Criteria 2:
 
 Acceptance Criteria 3: 
 ```
+
+### Agile 
+
+We applied agile methodology to our planning. In the intial stages the were no concrete commitments to non-essential choices. All essential parts of our project were decided upon early and we made those the focus of our work as we headed to our minimum viable product.
+
+__Iterations__
+<br>
+Given that this project represents only one sprint or interation we moved all of our _Must Have_ and _Should Have_ user stories to the to-do section of our project board. This ensured that, by the end of he project we would have an MVP which had full functionality for a user and could provide a useful service.
+
+__Collaboration__
+<br>
+As we had a bried provided by an external client we listened and incorporated their ideas into the project while providing continous feedback on how we can realistically include the required features.
+
+Between the team we divided up work based on team member preference and made sure that we were all updated on eachothers progress. This allowed all developers to input ideas and suggest changes across the entire project.

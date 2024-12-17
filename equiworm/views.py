@@ -6,7 +6,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def TestHome(request):
-    return HttpResponse("This is the Home page")
+    return render(
+        request,
+        "equiworm/home.html",
+    )
 
 # Homepage
 

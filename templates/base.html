@@ -1,8 +1,7 @@
 {% load static %}
 {% url 'home' as home_url %}
 
-{% include './equiworm/navbar.html' %}
-{% include './equiworm/footer.html' %}
+
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -22,7 +21,7 @@
 <body class="d-flex flex-column h-100 main-bg">
 
 <!-- Navigation bar starts -->
-
+{% include './equiworm/navbar.html' %}
 <!-- Navigation bar ends -->
 
 <main class="flex-shrink-0 main-bg">
@@ -35,7 +34,7 @@
 </main>
 
 <!-- Footer starts-->
-
+{% include './equiworm/footer.html' %}
 <!-- Footer ends-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

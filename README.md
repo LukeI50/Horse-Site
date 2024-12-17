@@ -129,4 +129,9 @@ __Should Have__: Important features which could be missed but should be attempte
 
 __Could Have__: Potential additions which would improve the project but aren't neccessary for the MVP.
 
-__Wont Have__: Features which we will not be including in this iteration of the project either because they are unimportant or represent an value 
+__Wont Have__: Features which will not be included in this iteration of the project either because they are unimportant or would take up too much development time relative to their value.
+
+### Wireframing
+
+Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. We only used these wireframes as a general structure and as the development progressed we allowed them to change.
+

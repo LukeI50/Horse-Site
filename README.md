@@ -30,7 +30,7 @@ If Psycopg2 fails install on environment, run
     - [Accessibility and Responsiveness](#accessibililty-and-responsiveness)
     - [Colour Palette](#colour-palette)
     - [Fonts](#fonts)
-3. [Project Planning](#)
+3. [Project Planning](#project-planning)
     - [Agile](#agile)
     - [User Stories](#user-stories)
     - [MoSCoW Prioritisation](#moscow-prioritisation)
@@ -43,6 +43,10 @@ If Psycopg2 fails install on environment, run
     - [Languages](#languages)
     - [Frameworks](#frameworks)
     - [Tools and Resources](#tools-and-resources)
+8. [Testing](#testing)
+    - [Validation](#validation)
+    - [Manual Testing](#manual-testing)
+    - [User Story Testing](#user-story-testing)
 
 ## UX / UI
 
@@ -140,7 +144,7 @@ __Wont Have__: Features which will not be included in this iteration of the proj
 
 ### Wireframing
 
-Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. We only used these wireframes as a general structure and as the development progressed we allowed them to change.
+Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. As these wireframes were used only as a general structure they will differ slightly from our final project.
 
 _Wireframing images_
 
@@ -188,3 +192,25 @@ _Can include if neccessary_
 - _Placeholder_
 - _Placeholder_
 - _Placeholder_
+
+## Testing
+
+### Validation
+
+In order to ensure that our code met the required guidelines we used the HTML and CSS validators from the [W3C](https://www.w3.org/) and a Python linter.
+
+__[HTML Validator](https://validator.w3.org/)__
+<br>
+
+- _Info and images here_
+
+__[CSS Validator](https://jigsaw.w3.org/css-validator/)__
+<br>
+
+- _Info and images here_
+
+### Manual Testing
+
+Maual testing was done by simply navigating through the site and making sure that all areas were working as intended. We also passed the product to non-developers to ensure that the design was intuative and avoid issues of over familiarity with the project.
+
+### User Story Testing

@@ -68,7 +68,7 @@ The colour palette for this project was chosen by looking at different horse coa
 </details>
 <br>
 
-Ultimately, we ended up chosing the colours shown below. They were picked based on the Piebald horse coat colour with some additional off-white and gray colours to fill in gaps.
+We ended up chosing the colours shown below. They were picked based on the Piebald horse coat colour with some additional off-white and gray colours to fill in gaps.
 
 <details>  
   <summary>Colour Palette</summary>    

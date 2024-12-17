@@ -1,0 +1,25 @@
+/*Navbar style*/
+.navbar-brand {
+    color: #7A371A;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.burger {
+    font-size: 1.5rem ;
+    
+}
+
+.navbar {
+    background-color: #F6F3EC ;
+}
+
+body {
+    background-color: #F6F3EC;
+}

@@ -75,6 +75,7 @@ INSTALLED_APPS = [
 
     # Local apps
     'equiworm',
+    'questions'
 ]
 
 MIDDLEWARE = [

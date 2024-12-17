@@ -1,3 +1,4 @@
+{% load static %}
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -28,6 +29,7 @@
 
         {% block content %}
         <!-- Content Goes here -->
+        
         {% endblock content %}
 
     </main>

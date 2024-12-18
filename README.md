@@ -36,19 +36,18 @@ If Psycopg2 fails install on environment, run
     - [MoSCoW Prioritisation](#moscow-prioritisation)
     - [Wireframing](#wireframing)
     - [Entity Relationship Diagrams](#entity-relationship-diagrams)
-4. [Security and Cookies](#security-and-cookies)
-5. [Features](#features)
-6. [Future Features](#future-features)
-7. [Languages and Frameworks](#languages-and-frameworks)
+4. [Features](#features)
+5. [Future Features](#future-features)
+6. [Languages and Frameworks](#languages-and-frameworks)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
     - [Tools and Resources](#tools-and-resources)
-8. [Testing](#testing)
+7. [Testing](#testing)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
     - [User Story Testing](#user-story-testing)
-9. [Deployment](#deployment)
-10. [Credits](#credits)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
 ## UX / UI
 
@@ -82,14 +81,18 @@ We started with a variety of fonts, sticking mainly to sans serif fonts for read
 
 <details>
   <summary>Font choices</summary>
-      <img src="" alt="Inital font choices">
+      <img src="assets/readme_images/equiworm_fonts.png" alt="Inital font choices">
 </details>
 <br>
 
 Eventually we chose __font choice__ as we felt that it maintained readability while having a professional, trustworthy look.
 
 
-_Add summary box with image of final font choice_
+<details>
+  <summary>Project Board</summary>
+      <img src="assets/readme_images/project_board.png" alt="GitHub project board">
+</details>
+<br>
 
 ## Project planning
 
@@ -100,7 +103,7 @@ Following this we created a kanban style project board on GitHub and populated i
 
 <details>
   <summary>Project Board</summary>
-      <img src="" alt="project board">
+      <img src="assets/readme_images/project_board.png" alt="GitHub project board">
 </details>
 <br>
 
@@ -148,17 +151,23 @@ __Wont Have__: Features which will not be included in this iteration of the proj
 
 Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. As these wireframes were used only as a general structure they will differ slightly from our final project.
 
-_Wireframing images_
+<details>
+  <summary>ERD Images</summary>
+      <img src="assets/readme_images/wireframe_1.png" alt="Mobile view wireframe">
+      <img src="assets/readme_images/wireframe_2.png" alt="Desktop view wireframe">
+</details>
+<br>
 
 ### Entity Relationship Diagrams
 
 ERDs were created using _link_.
 
-_erd images_
-
-## Security and Cookies
-
-_Can include if neccessary_
+<details>
+  <summary>ERD Images</summary>
+      <img src="assets/readme_images/ERD_1.png" alt="ERD blog post and feedback image">
+      <img src="assets/readme_images/ERD_2.png" alt="ERD for worming survey">
+</details>
+<br>
 
 ## Features
 
@@ -191,9 +200,9 @@ _Can include if neccessary_
 
 ### Tools and Resources
 
-- _Placeholder_
-- _Placeholder_
-- _Placeholder_
+- [Inkscape](https://inkscape.org/) for creating vector images for logos.
+- [chatGPT](https://chatgpt.com/) for code checking and suggestions.
+- [Miro](https://miro.com/) for cloud based project planning.
 
 ## Testing
 

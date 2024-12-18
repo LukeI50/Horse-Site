@@ -1,5 +1,27 @@
+body {
+    background-color: #F6F3EC;
+}
+
 /*Navbar style*/
+.navbar {
+    background-color: #F6F3EC ;
+}
+
 .navbar-brand {
+    color: #7A371A;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.logo {
+    width: 50px;      
+    height: auto;           
+}
+
+.brand-text {
     color: #7A371A;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -9,17 +31,49 @@
 
 .navbar-toggler {
     border: none;
+    border-color: transparent;
 }
 
 .burger {
     font-size: 1.5rem ;
-    
 }
 
-.navbar {
-    background-color: #F6F3EC ;
+
+.nav-link {
+    font-size: small;
+    color: #7A371A;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-right: 2rem;
 }
 
-body {
-    background-color: #F6F3EC;
+.nav-link:hover {
+    color: #88a51d; 
+    transform: scale(1.1);
+}
+
+.navitem {
+    padding-left: 1.5rem;
+}
+/* buttons */
+
+.form-btn {
+    background-color: #b6cd5b;
+    color: #7A371A;
+    width: 30%;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-btn:hover {
+    background-color: #88a51d;
+    color: #7A371A;
+    transition: color 0.1s ease;
+    transform: scale(1.05);
+}
+
+.form-btn:focus {
+    outline: 3px solid #88a51d; 
+    background-color: #88a51d; 
 }

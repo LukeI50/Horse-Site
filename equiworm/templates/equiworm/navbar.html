@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- navbar -->
 
 <nav class="navbar navbar-expand-lg">
@@ -18,22 +20,27 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
                 <li class="navitem">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="navitem">
-                    <a href="#" class="nav-link">Updates</a>
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
                 </li>
                 <li class="navitem">
                     <a href="#" class="nav-link">Risk-Checker</a>
                 </li>
                 <li class="navitem">
-                    <a href="#" class="nav-link">Other</a>
-                </li>
-                <li class="navitem">
-                    <a href="#" class="nav-link">Tracker</a>
+                    <a href="#" class="nav-link">About</a>
                 </li>
 
-                {% if user.is_authenticated %}
+                <!-- Not needed currently -->
+
+                <!-- <li class="navitem">
+                    <a href="#" class="nav-link">Tracker</a>
+                </li> -->
+                <!-- <li class="navitem">
+                    <a href="#" class="nav-link">Updates</a>
+                </li> -->
+
+                <!-- Removed until auth is integrated -->
+
+                <!-- {% if user.is_authenticated %}
                 <li class="navitem">
                     <a href="#" class="nav-link">Profile</a>
                 </li>
@@ -44,7 +51,7 @@
                 <li class="navitem">
                     <a href="#" class="nav-link">Create account</a>
                 </li>
-                {% endif %}
+                {% endif %} -->
 
             </ul>
         </div>
@@ -52,4 +59,4 @@
     </div>
 </nav>
 
-<!-- /navbar -->
+<!-- End navbar -->

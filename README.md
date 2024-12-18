@@ -1,14 +1,18 @@
 # Equiworm
 
+_img of multiplatform view_
+
 [Deployed Project]()
 
 [GitHub Repository](https://github.com/LukeI50/Horse-Site/)
 
 [Miroboard](https://miro.com/app/board/uXjVL2snal4=/)
 
-_img of multiplatform view_
+Equiworm is an online tool for horse owners that allows them to assess the risk of worm infection and decide whether giving treatment is neccessary.
 
-_introduction to equiworm. User value, intended usage, reason for creation, client specification_
+Users can access the site and see some brief information about how to use the tool and why it is important to know when to give medication and when not to.
+
+This website was created in response to the limited availability of easy to use, online tools for this issue.
 
 ### Notes
 
@@ -36,71 +40,72 @@ If Psycopg2 fails install on environment, run
     - [MoSCoW Prioritisation](#moscow-prioritisation)
     - [Wireframing](#wireframing)
     - [Entity Relationship Diagrams](#entity-relationship-diagrams)
-4. [Security and Cookies](#security-and-cookies)
-5. [Features](#features)
-6. [Future Features](#future-features)
-7. [Languages and Frameworks](#languages-and-frameworks)
+4. [Features](#features)
+5. [Future Features](#future-features)
+6. [Languages and Frameworks](#languages-and-frameworks)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
     - [Tools and Resources](#tools-and-resources)
-8. [Testing](#testing)
+7. [Testing](#testing)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
-    - [User Story Testing](#user-story-testing)
-9. [Deployment](#deployment)
-10. [Credits](#credits)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
 ## UX / UI
 
-
-
 ### Accessibililty and Responsiveness
 
-_Add outline of descisions made regarding Accessibililty and Responsiveness._
+Mobile first design choices led our development process for the front end. All areas of the website should resize to suit a phone screen. This is particularly important for this project as we imaged that the typical user would be accessing the site from a mobile phone while they are in a paddock or stable with their horse or horses.
+
+We also decided to try and keep the load times of the website to a minimum as we expected that fields and stabes will likely not have the best mobile internet coverage.
 
 ### Colour Palette
 
 The colour palette for this project was chosen by looking at different horse coat colours.
 
-<details>  
-  <summary>Horse coat image insipration</summary>    
+<details>
+  <summary>Horse coat image insipration</summary>
       <img src="" alt="Horse coats">
 </details>
 <br>
 
 We ended up chosing the colours shown below. They were picked based on the Piebald horse coat colour with some additional off-white and gray colours to fill in gaps.
 
-<details>  
-  <summary>Colour Palette</summary>    
+<details>
+  <summary>Colour Palette</summary>
       <img src="" alt="Colour palette">
 </details>
 <br>
 
-### Fonts 
+### Fonts
 
 We started with a variety of fonts, sticking mainly to sans serif fonts for readability.
 
-<details>  
-  <summary>Font choices</summary>    
-      <img src="" alt="Inital font choices">
+<details>
+  <summary>Font choices</summary>
+      <img src="assets/readme_images/equiworm_fonts.png" alt="Inital font choices">
 </details>
 <br>
 
 Eventually we chose __font choice__ as we felt that it maintained readability while having a professional, trustworthy look.
 
 
-_Add summary box with image of final font choice_
+<details>
+  <summary>Project Board</summary>
+      <img src="assets/readme_images/project_board.png" alt="GitHub project board">
+</details>
+<br>
 
-## Project planning 
-
+## Project planning
 
 Initial planning of the project was done using [Miro](https://miro.com). All colour palettes, wireframes and ERDs were posted there and developed over time.
 
 Following this we created a kanban style project board on GitHub and populated it with user stories.
 
-<details>  
-  <summary>Project Board</summary>    
-      <img src="" alt="project board">
+<details>
+  <summary>Project Board</summary>
+      <img src="assets/readme_images/project_board.png" alt="GitHub project board">
 </details>
 <br>
 
@@ -109,7 +114,7 @@ The user stories were created following a consistent style:
 ```
 As a (role) I can (ability) in order to (outcome).
 
-Acceptance Criteria 1:
+Acceptance Criteria 1: 
 
 Acceptance Criteria 2: 
 
@@ -130,11 +135,31 @@ Between the team we divided up work based on team member preference and made sur
 
 ### User Stories
 
-_Copy user stories from [GitHub](https://github.com/users/LukeI50/projects/9)_
+__User story examples:__
+
+```
+As a user I can view the about page, in order to understand the websites purpose and how to use it.
+
+AC1: Users can easily navigate from the home page to the about page.
+```
+
+```
+As a Horse owner or caretaker, I can complete a detailed questionnaire about my horse's risk factors for worm infection so that I can take appropriate preventative action or treatment measures.
+
+AC1: Questionnaire results can be viewed at the end.
+AC2: Questionnaire has meaningful questions with scores
+AC3: Admins can edit the questionnaire.
+```
+
+```
+As the website administrator I was to update the list of parasites, treatments, and prevention methods so that the information remains current.
+
+AC1: Info pages can be edited from the admin panel.
+```
 
 ### MoSCoW prioritisation
 
-All of our user stories were sorted using the MoSCow prioritisation system:
+Our user stories were sorted using the MoSCow prioritisation system:
 
 __Must Have__: Features which form our MVP and without which the website would not function.
 
@@ -148,17 +173,23 @@ __Wont Have__: Features which will not be included in this iteration of the proj
 
 Wireframing was done using [Miro](https://miro.com/). Standard templates were used and then adapted for all the different pages of the website. As these wireframes were used only as a general structure they will differ slightly from our final project.
 
-_Wireframing images_
+<details>
+  <summary>ERD Images</summary>
+      <img src="assets/readme_images/wireframe_1.png" alt="Mobile view wireframe">
+      <img src="assets/readme_images/wireframe_2.png" alt="Desktop view wireframe">
+</details>
+<br>
 
 ### Entity Relationship Diagrams
 
 ERDs were created using _link_.
 
-_erd images_
-
-## Security and Cookies
-
-_Can include if neccessary_
+<details>
+  <summary>ERD Images</summary>
+      <img src="assets/readme_images/ERD_1.png" alt="ERD blog post and feedback image">
+      <img src="assets/readme_images/ERD_2.png" alt="ERD for worming survey">
+</details>
+<br>
 
 ## Features
 
@@ -170,10 +201,10 @@ _Can include if neccessary_
 
 ## Future Features
 
-- _placeholder_
-- _placeholder_
-- _placeholder_
-- _placeholder_
+- Horse owners can signup and login.
+- Horse owners can create a profile and save previous completed surverys as a record.
+- Blog post section to the website to keep users updated about current related topics.
+- 
 - _placeholder_
 
 ## Languages and Frameworks
@@ -191,9 +222,9 @@ _Can include if neccessary_
 
 ### Tools and Resources
 
-- _Placeholder_
-- _Placeholder_
-- _Placeholder_
+- [Inkscape](https://inkscape.org/) for creating vector images for logos.
+- [chatGPT](https://chatgpt.com/) for code checking and suggestions.
+- [Miro](https://miro.com/) for cloud based project planning.
 
 ## Testing
 
@@ -214,10 +245,6 @@ __[CSS Validator](https://jigsaw.w3.org/css-validator/)__
 ### Manual Testing
 
 Maual testing was done by simply navigating through the site and making sure that all areas were working as intended. We also passed the product to non-developers to ensure that the design was intuative and to avoid issues realted to over familiarity with the project.
-
-### User Story Testing
-
-_Table with user story testing with PASS / FAIL values._
 
 ## Deployment
 

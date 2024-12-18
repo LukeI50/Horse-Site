@@ -30,11 +30,19 @@ class questionnaire_view(generic.ListView):
         #     temp_list.append(list(Answer2.objects.all().filter(question = question)))
         #     questions_and_answers.append(temp_list)
             
-        context["questions"] = Question2.objects.filter(questionnaire = self.get_object())
-        context["answers"] = Answer2.objects.all()
+        # context["questions"] = Question2.objects.filter(questionnaire = self.get_object())
+        # context["answers"] = Answer2.objects.all()
 
         # answers = Answer2.objects.all().first()
         # context["answers"] = answers
+
+        questions = Question2.objects.filter(questionnaire = self.get_object())
+        context["questions"] = questions
+
+        # bury the questions answers into each question dictionary/object
+        for question in questions:
+            question.answers_list = Answer2.objects.filter(question=question)
+
         return context
     
 class question_view(generic.ListView):

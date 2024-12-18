@@ -1,22 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
 <div class="" id="results"></div>
 <br>
 {{ questionnaire.name }}
 <br>
 {% for question in questions %}
-    <h3>{{question.question_text}}</h1>
+<h3>{{question.question_text}}</h1>
     <ul>
-    {% for answer in answers %}
+        {% for answer in answers %}
         {% if answer.question == question %}
-            <li><button class="answer" data-weight="{{ answer.weighting }}" data-question-id="{{ answer.question.id }}">{{ answer.answer_text }}</button></li>
+        <li><button class="answer" data-weight="{{ answer.weighting }}" data-question-id="{{ answer.question.id }}">{{ answer.answer_text }}</button></li>
         {% endif %}
-    {% endfor %}
+        {% endfor %}
     </ul>
+    {% endfor %}
+    
+    <script src="{% static 'js/questionnaire_script.js' %}"></script>
+    
+    
+    
+    
+    
+{% block content %}
+{{ questionnaire.name }}
+{% for question in questions %}
+<div data-question-id="{{ question.id }}" class="question">
+    <h2>{{ question.question_text }}</h2>
+    
+    {% if question.answers_list %}
+    <ul>
+        {% for answer in question.answers_list %}
+        <li>{{ answer.answer_text }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p>No answers available for this question.</p>
+    {% endif %}
+</div>
 {% endfor %}
-
-<script src="{% static 'js/questionnaire_script.js' %}"></script>
-
 {% endblock content %}

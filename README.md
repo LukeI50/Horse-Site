@@ -1,14 +1,14 @@
 # Equiworm
 
+_img of multiplatform view_
+
 [Deployed Project]()
 
 [GitHub Repository](https://github.com/LukeI50/Horse-Site/)
 
 [Miroboard](https://miro.com/app/board/uXjVL2snal4=/)
 
-_img of multiplatform view_
-
-Equiworm is an online tool for horse owners that allows them to assess the risk of worm infection and decide whether giving treatment is neccessary. 
+Equiworm is an online tool for horse owners that allows them to assess the risk of worm infection and decide whether giving treatment is neccessary.
 
 Users can access the site and see some brief information about how to use the tool and why it is important to know when to give medication and when not to.
 

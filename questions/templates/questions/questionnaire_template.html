@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+{{ questionnaire.name }}
+<br>
+{% for question in questions %}
+    <a href="{{ questionnaire.slug }}/{{ question.id }}">{{ question.question_text }}</a>
+    <br>
+{% endfor %}
+
+{% endblock content %}

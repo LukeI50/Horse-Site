@@ -12,8 +12,7 @@ Equiworm is an online tool for horse owners that allows them to assess the risk 
 
 Users can access the site and see some brief information about how to use the tool and why it is important to know when to give medication and when not to.
 
-This website was created in response to the limited availability of easy to use online tools in this area.
-
+This website was created in response to the limited availability of easy to use, online tools for this issue.
 
 ### Notes
 
@@ -50,7 +49,6 @@ If Psycopg2 fails install on environment, run
 7. [Testing](#testing)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
-    - [User Story Testing](#user-story-testing)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
 
@@ -58,7 +56,9 @@ If Psycopg2 fails install on environment, run
 
 ### Accessibililty and Responsiveness
 
-The user interface was designed with a mobile first. 
+Mobile first design choices led our development process for the front end. All areas of the website should resize to suit a phone screen. This is particularly important for this project as we imaged that the typical user would be accessing the site from a mobile phone while they are in a paddock or stable with their horse or horses.
+
+We also decided to try and keep the load times of the website to a minimum as we expected that fields and stabes will likely not have the best mobile internet coverage.
 
 ### Colour Palette
 
@@ -135,11 +135,31 @@ Between the team we divided up work based on team member preference and made sur
 
 ### User Stories
 
-_Copy user stories from [GitHub](https://github.com/users/LukeI50/projects/9)_
+__User story examples:__
+
+```
+As a user I can view the about page, in order to understand the websites purpose and how to use it.
+
+AC1: Users can easily navigate from the home page to the about page.
+```
+
+```
+As a Horse owner or caretaker, I can complete a detailed questionnaire about my horse's risk factors for worm infection so that I can take appropriate preventative action or treatment measures.
+
+AC1: Questionnaire results can be viewed at the end.
+AC2: Questionnaire has meaningful questions with scores
+AC3: Admins can edit the questionnaire.
+```
+
+```
+As the website administrator I was to update the list of parasites, treatments, and prevention methods so that the information remains current.
+
+AC1: Info pages can be edited from the admin panel.
+```
 
 ### MoSCoW prioritisation
 
-All of our user stories were sorted using the MoSCow prioritisation system:
+Our user stories were sorted using the MoSCow prioritisation system:
 
 __Must Have__: Features which form our MVP and without which the website would not function.
 
@@ -181,10 +201,10 @@ ERDs were created using _link_.
 
 ## Future Features
 
-- _placeholder_
-- _placeholder_
-- _placeholder_
-- _placeholder_
+- Horse owners can signup and login.
+- Horse owners can create a profile and save previous completed surverys as a record.
+- Blog post section to the website to keep users updated about current related topics.
+- 
 - _placeholder_
 
 ## Languages and Frameworks
@@ -225,10 +245,6 @@ __[CSS Validator](https://jigsaw.w3.org/css-validator/)__
 ### Manual Testing
 
 Maual testing was done by simply navigating through the site and making sure that all areas were working as intended. We also passed the product to non-developers to ensure that the design was intuative and to avoid issues realted to over familiarity with the project.
-
-### User Story Testing
-
-_Table with user story testing with PASS / FAIL values._
 
 ## Deployment
 

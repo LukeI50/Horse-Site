@@ -8,7 +8,7 @@
 
 _img of multiplatform view_
 
-_introduction to equiworm. User value, intended usage, reason for creation, client specification_
+_introduction to equiworm. User value, intended usage, reason for creation, client specification.
 
 ### Notes
 
@@ -50,8 +50,6 @@ If Psycopg2 fails install on environment, run
 9. [Credits](#credits)
 
 ## UX / UI
-
-
 
 ### Accessibililty and Responsiveness
 
@@ -95,7 +93,6 @@ Eventually we chose __font choice__ as we felt that it maintained readability wh
 <br>
 
 ## Project planning
-
 
 Initial planning of the project was done using [Miro](https://miro.com). All colour palettes, wireframes and ERDs were posted there and developed over time.
 

@@ -5,44 +5,84 @@
 
 
 <div class="container my-5">
+    <!-- Header: Mission & Image -->
     <div class="row">
-        <!-- Center the Update Title -->
-        <div class="col-12 text-center mb-4">
+        <div class="col-12 text-center">
             <h2>About</h2>
         </div>
-
-        <!-- Image Section -->
-        <div class="col-12">
-            <div class="image-container mb-4 ">
+    </div>
+<div class="card">
+    <div class="row">
+        <!-- Left Column for Image -->
+        <div class="col-12 col-md-6">
+            <div class="image-container">
                 <img src="{% static 'images/horses 005.jpg' %}" class="img-fluid about-img" alt="Image for Update">
             </div>
         </div>
+        <!-- Right Column for Mission & Vision -->
+        <div class="col-12 col-md-6">
+            <h2>Mission</h2>
+            <p>"Empowering Horse Owners with Smarter Parasite Management Tools"</p>
+            <p>Our mission is to provide horse, pony, and donkey owners with accessible, evidence-based tools to assess
+                and manage their equine worm risk.</p>
 
-        <!-- Text Content Section -->
-        <div class="col-12">
-            <p>
-                A cat named Mittens has made national headlines after she managed to find her way back home, despite being lost for over a week. Mittens, a three-year-old tabby, went missing on July 4th after she escaped through an open window at her owner's home.
-            </p>
-            <p>
-                Despite a frantic search by her owner, Jane Smith, Mittens was nowhere to be found. Smith put up flyers around the neighborhood and posted on social media, hoping someone would spot her beloved pet.
-            </p>
-            <p>
-                Days turned into a week, and Smith had all but given up hope of ever seeing Mittens again. But then, to her surprise, she received a call from a neighbor who had spotted the cat on their porch. Smith rushed over and was overjoyed to find Mittens safe and sound.
-            </p>
-            <p>
-                It’s still unclear how Mittens managed to find her way home after being lost for so long. Some speculate that she may have followed the scent of her owner's other cats, while others believe she simply had a strong homing instinct.
-            </p>
-            <p>
-                Regardless of how she did it, Mittens' incredible journey has captured the hearts of animal lovers across the country. Smith says she's grateful to have her furry friend back home, and plans to keep a closer eye on her in the future.
-            </p>
+            <h2>Vision</h2>
+            <p>"A Future of Healthy Horses, Effective Wormers, and Sustainable Parasite Management"</p>
+            <p>We envision a world where equine worm control is guided by science, no guesswork.</p>
         </div>
     </div>
 </div>
 
+    <!-- Values Section -->
+    <div class="row">
+        <div class="col-12">
+            <h2>Values</h2>
+            <ul>
+                <li><strong>1. Evidence-Based Care:</strong> We are committed to providing tools and advice rooted in
+                    the latest veterinary research, including the CANTER Guidelines.</li>
+                <li><strong>2. Responsibility:</strong> We believe in protecting horses, their owners, and the
+                    environment by promoting sustainable worm control practices.</li>
+                <li><strong>3. Empowerment:</strong> Our goal is to simplify complex veterinary concepts and empower
+                    horse owners to make informed decisions about their horses’ health.</li>
+                <li><strong>4. Innovation:</strong> We leverage technology and scientific advancements to make
+                    responsible worming accessible, user-friendly, and impactful.</li>
+                <li><strong>5. Trust and Transparency:</strong> We strive to build trust with horse owners by offering
+                    clear, honest, and unbiased information.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Two Cards Section -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="image-container">
+                    <img src="{% static '#' %}" class="img-fluid about-img" alt="adele image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Dr Adele Williams BVSc MRCVS DipECEIM PhD</h5>
+                    <p class="card-text"> is an RCVS & European specialist veterinary surgeon
+                        in Equine Internal Medicine, and a veterinary AI expert.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="image-container">
+                    <img src="{% static '#' %}" class="img-fluid about-img" alt="Laura image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Dr Laura Peachey BSc BVsC PhD
+                    </h5>
+                    <p class="card-text">
+                        is an equine veterinary surgeon and senior lecturer in veterinary
+                        parasitology at The University of Bristol.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-
-
-
-{% endblock %}
+    {% endblock %}

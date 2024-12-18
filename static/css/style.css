@@ -6,6 +6,10 @@ h2 {
     color: #7D7874;
 }
 
+p .values-list {
+    color: #7A371A;
+}
+
 /*Navbar style*/
 .navbar {
     background-color: #F6F3EC ;
@@ -71,7 +75,10 @@ h2 {
     background: #DED6CB;
     border: none;
     box-shadow: 2px 4px 8px rgba(122, 55, 26, 0.4); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+    padding: .5rem;
 }
 
 .card:hover {

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+{{ question.question_text }}
+<br>
+{% for answer in answers %}
+    <a href = "{{ answer.next_question.id }}">{{ answer.answer }}</a>
+    <br>
+{% endfor %}
+
+{% endblock content %}

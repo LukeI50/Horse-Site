@@ -2,9 +2,12 @@
 
 {% block content %}
 
-{% for questionnaire in Questionnaires %}
-    {{ questionnaire.name }}
-    {{ questionnaire.first_question}}
+<br>
+{{ questionnaire.name }}
+<br>
+{% for question in questions %}
+    <a href="/questionnaire/{{ questionnaire.id }}/{{ question.id }}">{{ question.question_text }}</a>
+    <br>
 {% endfor %}
 
 {% endblock content %}

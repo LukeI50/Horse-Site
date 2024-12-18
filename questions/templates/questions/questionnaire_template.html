@@ -1,61 +1,49 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<div class="" id="results"></div>
-<br>
-{{ questionnaire.name }}
-<br>
-{% for question in questions %}
-<h3>{{question.question_text}}</h1>
-    <ul>
-        {% for answer in answers %}
-        {% if answer.question == question %}
-        <li><button class="answer" data-weight="{{ answer.weighting }}" data-question-id="{{ answer.question.id }}">{{ answer.answer_text }}</button></li>
-        {% endif %}
-        {% endfor %}
-    </ul>
-    {% endfor %}
-    
-    <script src="{% static 'js/questionnaire_script.js' %}"></script>
-    
-    
+
 {% block content %}
-{{ questionnaire.name }}
-<div class="container questions-container">
-    <div id="questionCarousel" class="carousel slide question-carousel card mx-auto">
-        <div class="d-flex col carousel-inner">
-            {% for question in questions %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <div class="question-card card-body">
-                        <h5 class="card-title">{{ question.question_title }}</h5>
-                        <p class="card-text">{{ question.question_text }}</p>
-                        
-                        {% if question.answers_list %}
-                        <ul class="answer-options" data-question-id="{{ question.id }}">
-                            {% for answer in question.answers_list %}
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input {{question.id}}-check-box" name="{{question.id}}|{{answer.id}}" data-question-id="{{ question.id }}" data-answer-weighting="{{ answer.weighting }}">
-                                <label for="{{question.id}}|{{answer.id}}" class="form-check-label">{{ answer.answer_text }}</label>
-                            </div>
-                            {% endfor %}
-                        </ul>
-                        {% else %}
-                        <p>No answers available for this question.</p>
-                        {% endif %}
-                    </div>
+<!-- Questionnaire -->
+<h2 class="text-center">{{ questionnaire.name }}</h2>
+<!-- Carousel -->
+<div id="questionCarousel" class="carousel slide question-carousel card mx-auto">
+    <!-- Carousel Main Content -->
+    <div class="d-flex col carousel-inner">
+        {% for question in questions %}
+        <!-- Start of Question Item -->
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="question-card card-body">
+                    <h5 class="card-title">{{ question.question_title }}</h5>
+                    <p class="card-text">{{ question.question_text }}</p>
+                    
+                    {% if question.answers_list %}
+                    <ul class="answer-options" data-question-id="{{ question.id }}">
+                        {% for answer in question.answers_list %}
+                        <!-- Answer to Question -->
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input {{question.id}}-check-box" name="{{question.question_title}}" id="{{question.id}}|{{answer.id}}" data-question-id="{{ question.id }}" data-answer-weighting="{{ answer.weighting }}">
+                            <label for="{{question.id}}|{{answer.id}}" class="form-check-label">{{ answer.answer_text }}</label>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>No answers available for this question.</p>
+                    {% endif %}
+
                 </div>
-                {% endfor %}
             </div>
-            <div class="question-carousel-controls">
-                <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon align-middle" aria-hidden="true"></span>
-                    <span class="align-middle">Prev</span>
-                </button>
-                <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
-                    <span class="align-middle">Next</span>
-                    <span class="carousel-control-next-icon align-middle" aria-hidden="true"></span>
-                </button>
-            </div>
-    </div>
+            {% endfor %}
+        </div>
+        <!-- Carousel Button Controls -->
+        <div class="question-carousel-controls">
+            <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon align-middle" aria-hidden="true"></span>
+                <span class="align-middle">Prev</span>
+            </button>
+            <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
+                <span class="align-middle">Next</span>
+                <span class="carousel-control-next-icon align-middle" aria-hidden="true"></span>
+            </button>
+        </div>
 </div>
 {% endblock content %}

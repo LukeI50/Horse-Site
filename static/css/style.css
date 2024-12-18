@@ -3,13 +3,17 @@ body {
 }
 
 /*Navbar style*/
+.navbar {
+    background-color: #F6F3EC ;
+}
+
 .navbar-brand {
     color: #7A371A;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-style: bold;
     font-size: 1.5rem;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
 }
 
 .navbar-toggler {
@@ -21,15 +25,46 @@ body {
     
 }
 
-.navbar {
-    background-color: #F6F3EC ;
+.nav-link {
+    font-size: small;
+    color: #7A371A;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-right: .5rem;
 }
 
+.nav-link:hover {
+    color: #88a51d; 
+    transform: scale(1.1);
+}
+
+
+.navbar-nav {
+    display: flex;              
+    justify-content: flex-end; 
+    align-items: end;        
+    width: 100%;          
+}
 
 /* buttons */
 
 .form-btn {
-    background-color: #b6cd5b !important;
-    color: #7A371A !important;
-    width: 50%;
+    background-color: #b6cd5b;
+    color: #7A371A;
+    width: 30%;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-btn:hover {
+    background-color: #88a51d;
+    color: #7A371A;
+    transition: color 0.1s ease;
+    transform: scale(1.05);
+}
+
+.form-btn:focus {
+    outline: 3px solid #88a51d; 
+    background-color: #88a51d; 
 }

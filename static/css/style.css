@@ -1,3 +1,7 @@
+body {
+    background-color: #F6F3EC;
+}
+
 /*Navbar style*/
 .navbar-brand {
     color: #7A371A;
@@ -20,6 +24,11 @@
     background-color: #F6F3EC ;
 }
 
-body {
-    background-color: #F6F3EC;
+
+/* buttons */
+
+.form-btn {
+    background-color: #b6cd5b !important;
+    color: #7D7874 !important;
+    width: 25%;
 }

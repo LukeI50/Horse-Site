@@ -8,6 +8,13 @@
 {% for question in questions %}
     <a href="{{ questionnaire.slug }}/{{ question.id }}">{{ question.question_text }}</a>
     <br>
+
+    <div class="question-card">
+        <p class="question"></p>
+        <div class="answers">
+                <p>{{ ans.answer_text }}</p>
+        </div>
+    </div>
 {% endfor %}
 
 {% endblock content %}

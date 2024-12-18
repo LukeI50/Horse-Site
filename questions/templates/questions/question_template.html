@@ -7,6 +7,10 @@
 {% for answer in answers %}
     <a href = "{{ answer.next_question.id }}">{{ answer.answer }}</a>
     <br>
+
+    <div class="answer">
+        <h4 data-answer-score="{{answer.weighting}}">{{ answer.answer_text }}</h4>
+    </div>
 {% endfor %}
 
 {% endblock content %}

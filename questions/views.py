@@ -15,8 +15,10 @@ class questionnaire_view(generic.ListView):
         return Questionnaire.objects.all()
     
     def get_object(self, queryset=None):
-        questionnaire_id = self.kwargs.get("questionnaire_id")
-        return get_object_or_404(Questionnaire, id = questionnaire_id)
+        # questionnaire_id = self.kwargs.get("questionnaire_id")
+        questionnaire_slug = self.kwargs.get("questionnaire_slug")
+
+        return get_object_or_404(Questionnaire, slug = questionnaire_slug, is_current=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

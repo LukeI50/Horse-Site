@@ -39,7 +39,7 @@ body {
 }
 
 
-.nav-link, .nav-item {
+.nav-link {
     font-size: small;
     color: #7A371A;
     font-family: 'Roboto', sans-serif;
@@ -47,13 +47,28 @@ body {
     padding-right: 2rem;
 }
 
-.nav-link:hover, .nav-item:hover {
+.nav-link:hover {
     color: #88a51d; 
     transform: scale(1.1);
 }
 
 .navitem {
     padding-left: 1.5rem;
+}
+/* Card Styles*/
+
+.card {
+    background: #DED6CB;
+    border: none;
+    box-shadow: 2px 4px 8px rgba(122, 55, 26, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for scaling and shadow */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05);  /* Slightly enlarge the card */
+    box-shadow: 2px 4px 8px rgba(125, 120, 116, 0.4);  /* Add shadow for depth */
 }
 /* buttons */
 
@@ -76,4 +91,17 @@ body {
 .form-btn:focus {
     outline: 3px solid #88a51d; 
     background-color: #88a51d; 
+}
+
+/* footer buttons */
+.nav-item {
+    font-size: small;
+    color: #7A371A;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #88a51d; 
+    transform: scale(1.1);
 }

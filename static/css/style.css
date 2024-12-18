@@ -9,6 +9,7 @@ body {
     font-weight: 600;
     font-style: bold;
     font-size: 1.5rem;
+    padding-left: 2rem;
 }
 
 .navbar-toggler {
@@ -29,6 +30,6 @@ body {
 
 .form-btn {
     background-color: #b6cd5b !important;
-    color: #7D7874 !important;
-    width: 25%;
+    color: #7A371A !important;
+    width: 50%;
 }

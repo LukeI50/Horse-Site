@@ -39,7 +39,7 @@ body {
 }
 
 
-.nav-link {
+.nav-link, .nav-item {
     font-size: small;
     color: #7A371A;
     font-family: 'Roboto', sans-serif;
@@ -47,7 +47,7 @@ body {
     padding-right: 2rem;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-item:hover {
     color: #88a51d; 
     transform: scale(1.1);
 }

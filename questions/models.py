@@ -34,7 +34,7 @@ from django.db import models
 #     def __str__(self):
 #         return self.name
 
-class Questionnaire2(models.Model):
+class Questionnaire(models.Model):
     name = models.CharField(max_length=128)
     slug = models.SlugField()
     description = models.TextField(null=True, blank=True)
@@ -44,8 +44,8 @@ class Questionnaire2(models.Model):
         return self.name
 
 
-class Question2(models.Model):
-    questionnaire = models.ForeignKey(Questionnaire2, related_name="questions", on_delete=models.CASCADE)
+class Question(models.Model):
+    questionnaire = models.ForeignKey(Questionnaire, related_name="questions", on_delete=models.CASCADE)
     question_text = models.TextField()
     question_type = models.CharField(max_length=50, choices = [
         ('text', 'Text'),
@@ -57,8 +57,8 @@ class Question2(models.Model):
         return self.question_text
 
 
-class Answer2(models.Model):
-    question = models.ForeignKey(Question2, related_name = 'answers', on_delete=models.CASCADE)
+class Answer(models.Model):
+    question = models.ForeignKey(Question, related_name = 'answers', on_delete=models.CASCADE)
     answer_text = models.CharField(max_length=500)
     weighting = models.IntegerField(default=0)
 

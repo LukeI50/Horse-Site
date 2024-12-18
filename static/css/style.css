@@ -2,6 +2,10 @@ body {
     background-color: #F6F3EC;
 }
 
+h2 {
+    color: #7D7874;
+}
+
 /*Navbar style*/
 .navbar {
     background-color: #F6F3EC ;
@@ -35,12 +39,13 @@ body {
 }
 
 .burger {
-    font-size: 1.5rem ;
+    font-size: 2rem ;
+    color: #7A371A;
 }
 
 
 .nav-link {
-    font-size: small;
+    font-size: medium;
     color: #7A371A;
     font-family: 'Roboto', sans-serif;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -62,13 +67,12 @@ body {
     border: none;
     box-shadow: 2px 4px 8px rgba(122, 55, 26, 0.4); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for scaling and shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
-/* Hover Effect */
 .card:hover {
-    transform: scale(1.05);  /* Slightly enlarge the card */
-    box-shadow: 2px 4px 8px rgba(125, 120, 116, 0.4);  /* Add shadow for depth */
+    transform: scale(1.02);  
+    box-shadow: 2px 4px 8px rgba(125, 120, 116, 0.4); 
 }
 /* buttons */
 

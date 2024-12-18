@@ -19,62 +19,41 @@
     <script src="{% static 'js/questionnaire_script.js' %}"></script>
     
     
-    
-    
-    
-    {% for question in questions %}
-    <div data-question-id="{{ question.id }}" class="card question">
-        <div class="card-body">
-            <h5 class="card-title">{{ question.question_text }}</h5>
-            
-            {% if question.answers_list %}
-            <ul>
-                {% for answer in question.answers_list %}
-                <li>{{ answer.answer_text }}</li>
-                {% endfor %}
-            </ul>
-            {% else %}
-            <p>No answers available for this question.</p>
-            {% endif %}
-        </div>
-    </div>
-    {% endfor %}
-    
-    
 {% block content %}
 {{ questionnaire.name }}
-<div id="questionCarousel" class="carousel slide question-carousel card">
-    <div class="carousel-inner">
-        {% for question in questions %}
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <div class="question-card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ question.question_text }}</h5>
-                        
-                        {% if question.answers_list %}
-                        <ul>
-                            {% for answer in question.answers_list %}
-                            <li>{{ answer.answer_text }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% else %}
-                        <p>No answers available for this question.</p>
-                        {% endif %}
+<div class="container questions-container">
+    <div id="questionCarousel" class="carousel slide question-carousel card mx-auto">
+        <div class="d-flex col carousel-inner">
+            {% for question in questions %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="question-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ question.question_text }}</h5>
+                            
+                            {% if question.answers_list %}
+                            <ul>
+                                {% for answer in question.answers_list %}
+                                <li>{{ answer.answer_text }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p>No answers available for this question.</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        {% if }
-        <div>
-            <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            <div class="question-carousel-controls">
+                <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </div>
 </div>
 {% endblock content %}

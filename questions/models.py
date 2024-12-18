@@ -46,7 +46,8 @@ class Questionnaire(models.Model):
 
 class Question(models.Model):
     questionnaire = models.ForeignKey(Questionnaire, related_name="questions", on_delete=models.CASCADE)
-    question_text = models.TextField()
+    question_title = models.CharField(max_length=128)
+    question_text = models.TextField(blank=True, null=True)
     question_type = models.CharField(max_length=50, choices = [
         ('text', 'Text'),
         ('multiple_choice', "Multiple Choice"),
@@ -59,7 +60,7 @@ class Question(models.Model):
 
 class Answer(models.Model):
     question = models.ForeignKey(Question, related_name = 'answers', on_delete=models.CASCADE)
-    answer_text = models.CharField(max_length=500)
+    answer_text = models.CharField(max_length=256)
     weighting = models.IntegerField(default=0)
 
     def __str__(self):

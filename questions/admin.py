@@ -15,10 +15,12 @@ class questionnaire_admin(admin.ModelAdmin):
 
 @admin.register(Question)
 class question_admin(admin.ModelAdmin):
-    list_display = ("question_text",)
+    list_display = ("question_title",)
 
 
 
 @admin.register(Answer)
 class answer_admin(admin.ModelAdmin):
     list_display = ("answer_text",)
+    search_fields = ["question"]
+    list_filter = ["question"]

@@ -23,18 +23,6 @@ class questionnaire_view(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["questionnaire"] = self.get_object()
-        # questionsList = list(questions)
-        # questions_and_answers = []
-        # for question in questionsList:
-        #     temp_list = [question]
-        #     temp_list.append(list(Answer2.objects.all().filter(question = question)))
-        #     questions_and_answers.append(temp_list)
-            
-        # context["questions"] = Question2.objects.filter(questionnaire = self.get_object())
-        # context["answers"] = Answer2.objects.all()
-
-        # answers = Answer2.objects.all().first()
-        # context["answers"] = answers
 
         questions = Question2.objects.filter(questionnaire = self.get_object())
         context["questions"] = questions

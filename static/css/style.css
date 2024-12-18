@@ -2,6 +2,19 @@ body {
     background-color: #F6F3EC;
 }
 
+/* Carousel Styling */
+.question-carousel {
+    margin:auto;
+    width: 75vw;
+    text-align: center;
+    justify-self: center;
+}
+
+.question-carousel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 /*Navbar style*/
 .navbar {
     background-color: #F6F3EC ;

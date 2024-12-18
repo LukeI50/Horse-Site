@@ -22,21 +22,59 @@
     
     
     
+    {% for question in questions %}
+    <div data-question-id="{{ question.id }}" class="card question">
+        <div class="card-body">
+            <h5 class="card-title">{{ question.question_text }}</h5>
+            
+            {% if question.answers_list %}
+            <ul>
+                {% for answer in question.answers_list %}
+                <li>{{ answer.answer_text }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No answers available for this question.</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    
+    
 {% block content %}
 {{ questionnaire.name }}
-{% for question in questions %}
-<div data-question-id="{{ question.id }}" class="question">
-    <h2>{{ question.question_text }}</h2>
-    
-    {% if question.answers_list %}
-    <ul>
-        {% for answer in question.answers_list %}
-        <li>{{ answer.answer_text }}</li>
-        {% endfor %}
-        </ul>
-    {% else %}
-    <p>No answers available for this question.</p>
-    {% endif %}
+<div id="questionCarousel" class="carousel slide question-carousel card">
+    <div class="carousel-inner">
+        {% for question in questions %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="question-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ question.question_text }}</h5>
+                        
+                        {% if question.answers_list %}
+                        <ul>
+                            {% for answer in question.answers_list %}
+                            <li>{{ answer.answer_text }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p>No answers available for this question.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if }
+        <div>
+            <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="btn d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 </div>
-{% endfor %}
 {% endblock content %}

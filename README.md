@@ -8,7 +8,12 @@
 
 _img of multiplatform view_
 
-_introduction to equiworm. User value, intended usage, reason for creation, client specification.
+Equiworm is an online tool for horse owners that allows them to assess the risk of worm infection and decide whether giving treatment is neccessary. 
+
+Users can access the site and see some brief information about how to use the tool and why it is important to know when to give medication and when not to.
+
+This website was created in response to the limited availability of easy to use online tools in this area.
+
 
 ### Notes
 
@@ -53,7 +58,7 @@ If Psycopg2 fails install on environment, run
 
 ### Accessibililty and Responsiveness
 
-_Add outline of descisions made regarding Accessibililty and Responsiveness._
+The user interface was designed with a mobile first. 
 
 ### Colour Palette
 

@@ -9,22 +9,31 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Something here</h5>
-                    <p class="card-text">What does this site contain, what general info can be found in each section.</p>
+                    <h5 class="card-title text-center border-bottom">Protect Your Horse. Prevent Resistance. Simplify Worm Control
+                    </h5>
+                    <p class="card-text text-center">Using the latest <a
+                            href="https://canterforhorses.org.uk/guidelines/">CANTER Guidelines</a>, our simple and
+                        science-backed tool helps
+                        you assess your horse's worm risk and decide if treatment is needed—responsibly and effectively.
+                    </p>
                 </div>
-                <img src="your-image-left.jpg" class="card-img-top" alt="Image for left section">
+                <img src="{% static 'images/white_horses.webp' %}" class="card-img-bottom" alt="Image for left section">
             </div>
         </div>
 
         <!---------------------------------------- Center Section -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="#" class="card-img-top" alt="Image for center section">
+                <img src="{% static 'images/white_horses.webp' %}" class="card-img-top" alt="Image for center section">
                 <div class="card-body">
-                    <h5 class="card-title">Something Small</h5>
-                    <p class="card-text">Summer is the perfect time to indulge in some leisurely reading, whether it’s
-                        lying on the beach or lounging in the park. So, if you're looking for a way to unwind this
-                        summer, why not pick up a few books and escape into some captivating stories?</p>
+                    <h5 class="card-title text-center border-bottom">Why Responsible Worm Control Matters</h5>
+                    <p class="card-text text-center">Blanket treatments aren't the answer! Regular, unnecessary
+                        deworming can lead
+                        to anthelmintic resistance; making treatments less effective over time.
+                        Using a <strong>risk-based approach</strong> guided by the CANTER Guidelines ensures your horse
+                        gets the right
+                        treatment when it’s truly needed.
+                        Protect your horse’s health and reduce worm burdens on your pasture.</p>
                 </div>
             </div>
         </div>
@@ -33,10 +42,31 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Small Tittle</h5>
-                    <p class="card-text">Content</p>
+                    <h5 class="card-title text-center border-bottom">How Does the Equine Worm Risk Tool Work?</h5>
+                    <p class="card-text text-center">Other info about the site. Other information that could be relevant. Links to
+                        other reputable sites on the subject of Horses, Horse Health, etc.</p>
                 </div>
-                <img src="#" class="card-img-top" alt="Image for right section">
+                <div class="m-1" style="background-color: #cbc7c7; border-radius: 10px;">
+                    <ol class="m-2">
+                        <li>
+                            <h5>Answer a Few Simple Questions</h5>
+                            <p>Tell us about your horse: age, grazing habits, recent worm history, and pasture
+                                management.</p>
+                        </li>
+                        <li>
+                            <h5>Receive a Personalised Risk Assessment</h5>
+                            <p>We’ll analyse your answers based on the <strong>CANTER Guidelines</strong> to determine
+                                if treatment is
+                                needed.</p>
+                        </li>
+                        <li>
+                            <h5>Take Action: The Smart Way</h5>
+                            <p>Get tailored advice to help you decide whether to test or treat, ensuring you act
+                                responsibly for your horse’s health.</p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- <img src="{% static 'images/white_horses.webp' %}" class="card-img-top" alt="Image for right section"> -->
             </div>
         </div>
     </div>
@@ -45,10 +75,12 @@
     <div class="text-center mt-5">
         <div class="card p-4">
             <h5 class="card-title">Take the Guesswork Out of Worm Control</h5>
-            <p class="card-text">Protect your horse, your pasture, and the environment. Try the Equine Worm Risk Tool today.  It’s quick, free, and backed by science.
+            <p class="card-text">Protect your horse, your pasture, and the environment. Try the Equine Worm Risk Tool
+                today. It’s quick, free, and backed by science.
             </p>
             <div class="d-flex justify-content-center">
-                <a href="{% url 'questionnaire_view' 'check-worm-risk' %}" class=" btn btn-sm form-btn " >Start Your Free Worm Risk Check</a>
+                <a href="{% url 'questionnaire_view' 'check-worm-risk' %}" class=" btn btn-sm form-btn ">Start Your Free
+                    Worm Risk Check</a>
             </div>
         </div>
     </div>
@@ -56,7 +88,32 @@
 
 
 
+<style>
+    .card {
+        height: 100%;
+    }
 
+    h5 {
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+
+    /* ol {
+        list-style-type: none;
+        counter-reset: ol-counter;
+        list-style-position: inside;
+    }
+
+    ol li:before {
+        font-size: 15px;
+        content: counter(ol-counter);
+        counter-increment: ol-counter;
+    } */
+
+     ol li::marker {
+        font-size: 1.25rem;
+     }
+</style>
 
 
 

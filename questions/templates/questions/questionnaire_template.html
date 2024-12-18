@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-
+<div class="" id="results"></div>
 <br>
 {{ questionnaire.name }}
 <br>
@@ -10,10 +11,12 @@
     <ul>
     {% for answer in answers %}
         {% if answer.question == question %}
-            <li><button>{{ answer.answer_text }}</button></li>
+            <li><button class="answer" data-weight="{{ answer.weighting }}" data-question-id="{{ answer.question.id }}">{{ answer.answer_text }}</button></li>
         {% endif %}
     {% endfor %}
     </ul>
 {% endfor %}
+
+<script src="{% static 'js/questionnaire_script.js' %}"></script>
 
 {% endblock content %}

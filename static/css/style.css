@@ -238,7 +238,7 @@ ol li::marker {
 }
 
 /* Styling for cards */
-.card {
+.timeline-card {
     margin-top: 15px;
     padding: 20px;
     border-radius: 10px;

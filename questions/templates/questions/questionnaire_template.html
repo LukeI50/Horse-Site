@@ -11,7 +11,7 @@
     <div class="d-flex col carousel-inner">
         {% for question in questions %}
         <!-- Start of Question Item -->
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-question-id="{{ question.id }}">
                 <div class="question-card card-body">
                     <h5 class="card-title">{{ question.question_title }}</h5>
                     <p class="card-text">{{ question.question_text }}</p>
@@ -36,11 +36,11 @@
         </div>
         <!-- Carousel Button Controls -->
         <div class="question-carousel-controls">
-            <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
+            <button id="questionCarouselPrevious" class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon align-middle" aria-hidden="true"></span>
                 <span class="align-middle">Prev</span>
             </button>
-            <button class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
+            <button id="questionCarouselNext" class="btn btn-sm d-inline" type="button" data-bs-target="#questionCarousel" data-bs-slide="next">
                 <span class="align-middle">Next</span>
                 <span class="carousel-control-next-icon align-middle" aria-hidden="true"></span>
             </button>

@@ -19,6 +19,20 @@ class UtilityFunctions{
         
     };
 
+    parseCookie(cookie_name) {
+        let cookie_string = this.cookieGetValue(cookie_name);
+        let parsedObj = {};
+        let cookie_list = cookie_string.split("|");
+
+        for (let index = 0; index < cookie_list.length; index++) {
+            cookie_list[index] = cookie_list[index].split(":");
+            if (cookie_list[index][0] != ""){
+                parsedObj[cookie_list[index][0]] = parseInt(cookie_list[index][1]);
+            }
+        }
+
+        return parsedObj;
+    }
 
     elementCreate(element_name, class_list=[], text="", action="", method="", href="", attributes_obj={}) {
         const newElement = document.createElement(element_name);
@@ -107,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Get Results",
             )
             carouselControlsContainer.appendChild(finish_button);
+            finish_button.addEventListener("click", end_button);
 
         } else if (carouselsNext.classList.contains('d-none')) {
             utilityFunctions.showElement(carouselsNext);
@@ -143,8 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Need to be updated to take accidental selection into account.
                 if (answer_Weighting == 3) {
-
-                    window.location.replace(data_home_url);
+                    //window.location.replace(data_home_url);
                 }
 
                 console.log(utilityFunctions.cookieGetValue("Answers"));
@@ -152,6 +166,25 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+
+function end_button(event) {
+    let main_area = document.getElementsByTagName("main")
+    results_area = document.getElementsByClassName("results-area");
+    if(results_area.length === 0) {
+        results_area = utilityFunctions.elementCreate(
+            "div",
+            ["results-area"],
+            "Results Area",
+        )
+        main_area[0].appendChild(results_area)    
+    } else {
+        results_area = results_area[0]
+    }
+    
+    results = utilityFunctions.parseCookie("Answers");
+    console.log(results)
+    results_area.innerText = JSON.stringify(results)
+}
 
 
     // function updateCarouselControls(currentQuestion, cookie_values) {

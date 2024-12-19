@@ -6,14 +6,14 @@
 
     <div class="container-fluid">
 
-        <a href="#" class="navbar-brand">
-            <img src="static/images/horse_white.png" alt="Equiworms Logo" class="logo">
+        <a href="{% url 'home' %}" class="navbar-brand">
+            <img src="{% static 'images/horse_white.svg' %}" alt="Equiworms Logo" class="logo">
             <span class="brand-text ms-2">EQUIWORMS</span>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class=" burger fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars burger"></i>
         </button>
 
 
@@ -26,7 +26,7 @@
                     <a href="#" class="nav-link">Risk-Checker</a>
                 </li>
                 <li class="navitem">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
 
                 <!-- Not needed currently -->

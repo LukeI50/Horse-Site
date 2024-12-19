@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
-from .models import Questionnaire, Question
+from .models import Questionnaire, Question, Answer
 from .forms import *
 
 # Create your views here.
@@ -23,7 +23,14 @@ class questionnaire_view(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["questionnaire"] = self.get_object()
-        context["questions"] = self.get_object().questions.all()
+
+        questions = Question.objects.filter(questionnaire = self.get_object())
+        context["questions"] = questions
+
+        # bury the questions answers into each question dictionary/object
+        for question in questions:
+            question.answers_list = Answer.objects.filter(question=question)
+
         return context
     
 class question_view(generic.ListView):
@@ -40,7 +47,7 @@ class question_view(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["question"] = self.get_object()
-        context["answers"] = self.get_object().answers.all()
+        context["answers"] = self.get_object().answers.all()        
         return context
 
     pass

@@ -62,6 +62,7 @@ class Answer(models.Model):
     question = models.ForeignKey(Question, related_name = 'answers', on_delete=models.CASCADE)
     answer_text = models.CharField(max_length=256)
     weighting = models.IntegerField(default=0)
+    result = models.TextField(null=True)
 
     def __str__(self):
         return self.answer_text

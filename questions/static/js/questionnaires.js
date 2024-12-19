@@ -1,6 +1,25 @@
 // LukeI50's Emmet Snippet JS Utility Functions| Repo: LukeI50s-Snippets
 class UtilityFunctions{
 
+
+    cookieGetValue(cookie_name) {
+        const value = document.cookie.split("; ")
+        .find((row) => row.startsWith(`${cookie_name}=`))
+        ?.split("=")[1];
+        return value;
+    };
+
+
+    cookieCreateFromObj(Obj_name, key_and_value) {
+        let cookieString = "";
+        Object.entries(key_and_value).forEach(([key, value]) => {
+            cookieString += `${key}:${value}| `;
+        });
+        document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
+        
+    };
+
+
     elementCreate(element_name, class_list=[], text="", action="", method="", href="", attributes_obj={}) {
         const newElement = document.createElement(element_name);
 
@@ -22,24 +41,11 @@ class UtilityFunctions{
         return newElement
     };
 
-
-    cookieCreate(cookie_name, cookie_value) {
-        document.cookie = `${cookie_name}=${cookie_value}` + "; path=/; Secure; SameSite=None;"
-    };
-
-
-    cookieCreateFromObj(Obj_name, key_and_value) {
-        let cookieString = "";
-        Object.entries(key_and_value).forEach(([key, value]) => {
-            cookieString += `${key}:${value}| `;
-        });
-        document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
-        
-    };
-
+    
     hideElement(targetElement) {
         targetElement.classList.add('d-none');
     };
+    
 
     showElement(targetElement) {
         targetElement.classList.remove('d-none');
@@ -116,6 +122,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
+
+    // Deal with Cookie Creation and Updating
     const cookieObj = {}
 
     carouselItems.forEach((carouselItem) => {
@@ -126,19 +134,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 cookieObj[question_id] = answer_Weighting;
 
-
-
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
                 console.log(document.cookie)
                 if (answer_Weighting == 3) {
+
                     window.location.replace(data_home_url);
                 }
 
-                console.log(cookieObj)
+                console.log(utilityFunctions.cookieGetValue("Answers"));
             }
-        })
-    })
+        });
+    });
 
 
 

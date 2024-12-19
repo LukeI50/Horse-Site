@@ -13,7 +13,10 @@ class UtilityFunctions{
     cookieCreateFromObj(Obj_name, key_and_value) {
         let cookieString = "";
         Object.entries(key_and_value).forEach(([key, value]) => {
-            cookieString += `${key}:${value}|`;
+            cookieString += `${key}`
+            cookieString += `,`
+            cookieString += `${value}`
+            cookieString += `|`;
         });
         document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
         
@@ -25,9 +28,9 @@ class UtilityFunctions{
         let cookie_list = cookie_string.split("|");
 
         for (let index = 0; index < cookie_list.length; index++) {
-            cookie_list[index] = cookie_list[index].split(":");
+            cookie_list[index] = cookie_list[index].split(",");
             if (cookie_list[index][0] != ""){
-                parsedObj[cookie_list[index][0]] = parseInt(cookie_list[index][1]);
+                parsedObj[cookie_list[index][0]] = [parseInt(cookie_list[index][1]), cookie_list[index][2]];
             }
         }
 
@@ -145,10 +148,11 @@ document.addEventListener("DOMContentLoaded", function() {
         carouselItem.addEventListener('click', function(e) {
             if (e.target.classList.contains('questionnaire-answer-radio')) {
                 let question_id = e.target.getAttribute('data-question-id');
-                let answer_Weighting = e.target.getAttribute('data-answer-weighting');
+                let answer_weighting = e.target.getAttribute('data-answer-weighting');
+                let answer_result = e.target.getAttribute('data-answer-result')
 
                 
-                cookieObj[question_id] = answer_Weighting;
+                cookieObj[question_id] = [answer_weighting, answer_result];
 
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
@@ -157,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 // updateCarouselControls(currentQuestion, answers)
 
                 // Need to be updated to take accidental selection into account.
-                if (answer_Weighting == 3) {
+                if (answer_weighting == 3) {
                     //window.location.replace(data_home_url);
                 }
 
@@ -173,7 +177,7 @@ function end_button(event) {
     if(results_area.length === 0) {
         results_area = utilityFunctions.elementCreate(
             "div",
-            ["results-area"],
+            ["results-area", "container", "wrap"],
             "Results Area",
         )
         main_area[0].appendChild(results_area)    
@@ -183,7 +187,23 @@ function end_button(event) {
     
     results = utilityFunctions.parseCookie("Answers");
     console.log(results)
-    results_area.innerText = JSON.stringify(results)
+    
+    let colors = ["white", "#8FD14F", "#FAC710", "#F24726"]
+
+    let htmlString = "<div class='row'>";
+    Object.entries(results).forEach(([key, value]) => {
+        if (value[0] > 0)
+        {
+            htmlString += `
+            <div class="card col-sm" style="background: ${colors[value[0]]}; padding-inline:10px;">
+                <p class="card=text">${value[1]}</p>
+            </div>
+            `;
+        }
+    });
+    htmlString += "</div>";
+
+    results_area.innerHTML = htmlString;
 }
 
 

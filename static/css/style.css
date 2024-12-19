@@ -40,7 +40,9 @@ p, .values-list, li {
     font-style: bold;
     font-size: 1.5rem;
     padding-left: 1.5rem;
+    margin-right: 0px;
 }
+
 
 .logo {
     width: 50px;      
@@ -94,7 +96,6 @@ p, .values-list, li {
     border: none;
     box-shadow: 2px 4px 8px rgba(122, 55, 26, 0.4); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    margin-top: 2rem;
     margin-bottom: 2rem; 
     padding: .5rem;
 }
@@ -126,6 +127,29 @@ p, .values-list, li {
     background-color: #88a51d; 
 }
 
+@media (max-width: 576px){
+    .form-btn {
+        background-color: #b6cd5b;
+        color: black;
+        width: 30%;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .form-btn:hover {
+        background-color: #88a51d;
+        color: #7A371A;
+        transition: color 0.1s ease;
+        transform: scale(1.05);
+    }
+    
+    .form-btn:focus {
+        outline: 3px solid #88a51d; 
+        background-color: #88a51d; 
+    }
+}
+
 /* footer buttons */
 .nav-item {
     font-size: small;
@@ -147,7 +171,7 @@ p, .values-list, li {
 
 /* Home Page Cards */
 .home-card {
-    height: 92%;
+    height: 95%;
     padding: .5rem;
 }
 
@@ -208,9 +232,9 @@ ol li::marker {
     flex-direction: row-reverse; /* For odd items, position to the right */
 }
 
-.timeline-item:nth-child(odd) {
+/* .timeline-item:nth-child(odd) {
     flex-direction: row; /* For even items, position to the left */
-}
+} */
 
 /* Content on the left side of the timeline */
 .timeline-item .timeline-content-left {
@@ -221,9 +245,11 @@ ol li::marker {
 
 /* Content on the right side of the timeline */
 .timeline-item .timeline-content-right {
+    
+
     flex: 1;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
     text-align: left;
 }
 
@@ -244,7 +270,7 @@ ol li::marker {
 /* Styling for cards */
 .timeline-card {
     margin-top: 15px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%; /* Ensure cards take full width */
@@ -255,3 +281,51 @@ ol li::marker {
     font-size: 16px;
 }
 
+/* Adjustments for Small Screens (below 576px) */
+@media (max-width: 576px) {
+
+    
+.navbar-brand {
+padding-left: 0;
+    }
+
+
+    /* Adjust the line to the left */
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 10%; 
+        transform: translateX(0); 
+    }
+
+    /* Ensure timeline items are vertically aligned on small screens */
+    .timeline-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    /* Adjust the cards for left alignment */
+    .timeline-item .timeline-content-left,
+    .timeline-item .timeline-content-right {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Ensure icons and cards align properly */
+    .timeline-item .timeline-icon {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    /* Ensure the cards are aligned to the left */
+    .timeline-item .timeline-card {
+        width: 90%; /* Reduce width for better alignment */
+    }
+
+    /* Remove padding from navbar/logo */
+    .navbar-brand {
+        padding-left: 0 !important;
+    }
+}

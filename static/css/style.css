@@ -1,5 +1,21 @@
 body {
     background-color: #F6F3EC;
+    max-height: 100vh;
+}
+
+/* question carousel */
+.question-carousel {
+    width: 75vw;
+    text-align: center;
+    height: 30vh;
+    max-height: 75vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.question-carousel ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 h2 {

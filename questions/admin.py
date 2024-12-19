@@ -6,8 +6,8 @@ from .models import *
 
 @admin.register(Questionnaire)
 class questionnaire_admin(admin.ModelAdmin):
-    list_display = ("name", "slug", "created_on", "last_edited", "is_current")
-    search_fields = ["name", "created_on"]
+    list_display = ("name", "slug", "description", "is_current")
+    search_fields = ["name"]
     prepopulated_fields = {
         "slug" : ("name",)
     }
@@ -15,10 +15,12 @@ class questionnaire_admin(admin.ModelAdmin):
 
 @admin.register(Question)
 class question_admin(admin.ModelAdmin):
-    list_display = ("question_text",)
+    list_display = ("question_title",)
 
 
 
 @admin.register(Answer)
 class answer_admin(admin.ModelAdmin):
-    list_display = ("answer",)
+    list_display = ("answer_text",)
+    search_fields = ["question"]
+    list_filter = ["question"]

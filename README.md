@@ -129,16 +129,16 @@ We applied agile methodology to our planning. In the intial stages the were no c
 Given that this project represents only one sprint or interation we moved all of our _Must Have_ and _Should Have_ user stories to the to-do section of our project board. This ensured that, by the end of he project we would have an MVP which had full functionality for a user and could provide a useful service.
 
 #### Collaboration
-As we had a bried provided by an external client we listened and incorporated their ideas into the project while providing continous feedback on how we can realistically include the required features.
+As we had a brief provided by an external client we listened and incorporated their ideas into the project while providing continous feedback on how we can realistically include the required features.
 
-Between the team we divided up work based on team member preference and made sure that we were all updated on eachothers progress. This allowed all developers to input ideas and suggest changes across the entire project.
+Between the team we divided up work based on team member preference and made sure that we were all updated on each others progress. This allowed all developers to input ideas and suggest changes across the entire project.
 
 ### User Stories
 
-__User story examples:__
+#### Must-have User Stories 
 
 ```
-As a user I can view the about page, in order to understand the websites purpose and how to use it.
+As a site user I can view the about page, in order to understand the websites purpose and how to use it.
 
 AC1: Users can easily navigate from the home page to the about page.
 ```
@@ -155,6 +155,37 @@ AC3: Admins can edit the questionnaire.
 As the website administrator I was to update the list of parasites, treatments, and prevention methods so that the information remains current.
 
 AC1: Info pages can be edited from the admin panel.
+```
+
+```
+As a site user I can recieve a response when I submit my form in order to get the relevant information from my form.
+
+AC1: Form logic provides the appropriate information t based on user input.
+AC2: User approval messages show on correct form submission.
+```
+
+
+#### Should-have User Stories - for the second iteration
+```
+As a Horse owner or caretaker, I want to complete a detailed questionnaire about my horse's risk factors for worm infections, So that can take appropriate preventive or treatment measures.
+
+AC01 - Questionnaire results can be viewed at the end.
+AC02 - Questionnaire has meaningful questions with scores.
+AC03 - Admin can edit questionnaire.
+```
+```
+As an admin I can create, read, update and delete blog posts in order to provide relevant information to the reader.
+
+AC1: CRUD functionality incorporated in Django /admin panel.
+AC2: Blog posts are visable to users on the appropriate page.
+AC3: Only authenticated admin users can change or create blog posts.
+```
+
+```
+As a user I can view a specific blog post in order to find out more about a given topic.
+
+AC1: Single blog post view displays full blog details. Title, Date of Creation, Images, Content and Author.
+AC2: Main page blog post detail view can link to single blog post view.
 ```
 
 ### MoSCoW prioritisation

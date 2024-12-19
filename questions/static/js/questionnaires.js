@@ -178,10 +178,10 @@ function end_button(event) {
     if(results_area.length === 0) {
         results_area = utilityFunctions.elementCreate(
             "div",
-            ["results-area", "container", "wrap"],
+            ["results-area", "row"],
             "Results Area",
         )
-        main_area[0].appendChild(results_area)    
+        main_area[0].appendChild(results_area)
     } else {
         results_area = results_area[0]
     }
@@ -191,21 +191,21 @@ function end_button(event) {
     
     let colors = ["white", "#8FD14F", "#FAC710", "#F24726"]
 
-    let htmlString = "<div class='row'>";
+    let htmlString = "";
+    
     Object.entries(results).forEach(([key, value]) => {
         if (value[0] > 0)
         {
             htmlString += `
-            <div class="card col-sm" style="background: ${colors[value[0]]};">
+            <div class="card col-3" style="background: ${colors[value[0]]};">
                 <ul class="list-group list-group-flush" style="background:inherit;">
                     <li class="list-group-item" style="background:inherit;">${value[1]}</p>
-                    <li class="list-group-item" style="background:inherit;">${value[2]}</p>
+                    <li class="list-group-item" style="background:inherit;">Advice: ${value[2]}</p>
                 </div>
             </div>
             `;
         }
     });
-    htmlString += "</div>";
 
     results_area.innerHTML = htmlString;
 }

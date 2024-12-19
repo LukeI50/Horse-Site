@@ -196,9 +196,11 @@ function end_button(event) {
         if (value[0] > 0)
         {
             htmlString += `
-            <div class="card col-sm" style="background: ${colors[value[0]]}; padding-inline:10px;">
-                <p class="card=text">${value[1]}</p>
-                <p class="card=text">${value[2]}</p>
+            <div class="card col-sm" style="background: ${colors[value[0]]};">
+                <ul class="list-group list-group-flush" style="background:inherit;">
+                    <li class="list-group-item" style="background:inherit;">${value[1]}</p>
+                    <li class="list-group-item" style="background:inherit;">${value[2]}</p>
+                </div>
             </div>
             `;
         }

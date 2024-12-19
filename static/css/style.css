@@ -232,9 +232,9 @@ ol li::marker {
     flex-direction: row-reverse; /* For odd items, position to the right */
 }
 
-/* .timeline-item:nth-child(odd) {
+.timeline-item:nth-child(odd) {
     flex-direction: row; /* For even items, position to the left */
-} */
+}
 
 /* Content on the left side of the timeline */
 .timeline-item .timeline-content-left {
@@ -248,8 +248,8 @@ ol li::marker {
     
 
     flex: 1;
-    /* padding-left: 40px;
-    padding-right: 40px; */
+    padding-left: 40px;
+    padding-right: 40px; 
     text-align: left;
 }
 
@@ -270,10 +270,10 @@ ol li::marker {
 /* Styling for cards */
 .timeline-card {
     margin-top: 15px;
-    /* padding: 20px; */
+    padding: 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure cards take full width */
+    width: 100%;
 }
 
 /* Spacing for timeline item content */

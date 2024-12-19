@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 console.log(document.cookie)
                 answers = utilityFunctions.cookieGetValue("Answers");
-                updateCarouselControls(currentQuestion, answers)
+                // updateCarouselControls(currentQuestion, answers)
 
                 // Need to be updated to take accidental selection into account.
                 if (answer_Weighting == 3) {

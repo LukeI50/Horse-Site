@@ -28,9 +28,9 @@ class UtilityFunctions{
         let cookie_list = cookie_string.split("|");
 
         for (let index = 0; index < cookie_list.length; index++) {
-            cookie_list[index] = cookie_list[index].split(",");
-            if (cookie_list[index][0] != ""){
-                parsedObj[cookie_list[index][0]] = [parseInt(cookie_list[index][1]), cookie_list[index][2]];
+            let answer_list = cookie_list[index].split(",");
+            if (answer_list[0] != ""){
+                parsedObj[answer_list[0]] = [parseInt(answer_list[1])].concat(answer_list.slice(2));
             }
         }
 
@@ -150,9 +150,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 let question_id = e.target.getAttribute('data-question-id');
                 let answer_weighting = e.target.getAttribute('data-answer-weighting');
                 let answer_result = e.target.getAttribute('data-answer-result')
+                let answer_advice = e.target.getAttribute('data-answer-advice')
 
                 
-                cookieObj[question_id] = [answer_weighting, answer_result];
+                cookieObj[question_id] = [answer_weighting, answer_result, answer_advice];
 
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
@@ -177,10 +178,10 @@ function end_button(event) {
     if(results_area.length === 0) {
         results_area = utilityFunctions.elementCreate(
             "div",
-            ["results-area", "container", "wrap"],
+            ["results-area", "row"],
             "Results Area",
         )
-        main_area[0].appendChild(results_area)    
+        main_area[0].appendChild(results_area)
     } else {
         results_area = results_area[0]
     }
@@ -190,18 +191,21 @@ function end_button(event) {
     
     let colors = ["white", "#8FD14F", "#FAC710", "#F24726"]
 
-    let htmlString = "<div class='row'>";
+    let htmlString = "";
+    
     Object.entries(results).forEach(([key, value]) => {
         if (value[0] > 0)
         {
             htmlString += `
-            <div class="card col-sm" style="background: ${colors[value[0]]}; padding-inline:10px;">
-                <p class="card=text">${value[1]}</p>
+            <div class="card col-3" style="background: ${colors[value[0]]};">
+                <ul class="list-group list-group-flush" style="background:inherit;">
+                    <li class="list-group-item" style="background:inherit;">${value[1]}</p>
+                    <li class="list-group-item" style="background:inherit;">Advice: ${value[2]}</p>
+                </div>
             </div>
             `;
         }
     });
-    htmlString += "</div>";
 
     results_area.innerHTML = htmlString;
 }

@@ -13,12 +13,29 @@ class UtilityFunctions{
     cookieCreateFromObj(Obj_name, key_and_value) {
         let cookieString = "";
         Object.entries(key_and_value).forEach(([key, value]) => {
-            cookieString += `${key}:${value}|`;
+            cookieString += `${key}`
+            cookieString += `,`
+            cookieString += `${value}`
+            cookieString += `|`;
         });
         document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
         
     };
 
+    parseCookie(cookie_name) {
+        let cookie_string = this.cookieGetValue(cookie_name);
+        let parsedObj = {};
+        let cookie_list = cookie_string.split("|");
+
+        for (let index = 0; index < cookie_list.length; index++) {
+            cookie_list[index] = cookie_list[index].split(",");
+            if (cookie_list[index][0] != ""){
+                parsedObj[cookie_list[index][0]] = [parseInt(cookie_list[index][1]), cookie_list[index][2]];
+            }
+        }
+
+        return parsedObj;
+    }
 
     elementCreate(element_name, class_list=[], text="", action="", method="", href="", attributes_obj={}) {
         const newElement = document.createElement(element_name);
@@ -107,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Get Results",
             )
             carouselControlsContainer.appendChild(finish_button);
+            finish_button.addEventListener("click", end_button);
 
         } else if (carouselsNext.classList.contains('d-none')) {
             utilityFunctions.showElement(carouselsNext);
@@ -130,10 +148,11 @@ document.addEventListener("DOMContentLoaded", function() {
         carouselItem.addEventListener('click', function(e) {
             if (e.target.classList.contains('questionnaire-answer-radio')) {
                 let question_id = e.target.getAttribute('data-question-id');
-                let answer_Weighting = e.target.getAttribute('data-answer-weighting');
+                let answer_weighting = e.target.getAttribute('data-answer-weighting');
+                let answer_result = e.target.getAttribute('data-answer-result')
 
                 
-                cookieObj[question_id] = answer_Weighting;
+                cookieObj[question_id] = [answer_weighting, answer_result];
 
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
@@ -142,9 +161,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 // updateCarouselControls(currentQuestion, answers)
 
                 // Need to be updated to take accidental selection into account.
-                if (answer_Weighting == 3) {
-
-                    window.location.replace(data_home_url);
+                if (answer_weighting == 3) {
+                    //window.location.replace(data_home_url);
                 }
 
                 console.log(utilityFunctions.cookieGetValue("Answers"));
@@ -152,6 +170,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+
+function end_button(event) {
+    let main_area = document.getElementsByTagName("main")
+    results_area = document.getElementsByClassName("results-area");
+    if(results_area.length === 0) {
+        results_area = utilityFunctions.elementCreate(
+            "div",
+            ["results-area", "container", "wrap"],
+            "Results Area",
+        )
+        main_area[0].appendChild(results_area)    
+    } else {
+        results_area = results_area[0]
+    }
+    
+    results = utilityFunctions.parseCookie("Answers");
+    console.log(results)
+    
+    let colors = ["white", "#8FD14F", "#FAC710", "#F24726"]
+
+    let htmlString = "<div class='row'>";
+    Object.entries(results).forEach(([key, value]) => {
+        if (value[0] > 0)
+        {
+            htmlString += `
+            <div class="card col-sm" style="background: ${colors[value[0]]}; padding-inline:10px;">
+                <p class="card=text">${value[1]}</p>
+            </div>
+            `;
+        }
+    });
+    htmlString += "</div>";
+
+    results_area.innerHTML = htmlString;
+}
 
 
     // function updateCarouselControls(currentQuestion, cookie_values) {

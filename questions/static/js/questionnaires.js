@@ -13,7 +13,7 @@ class UtilityFunctions{
     cookieCreateFromObj(Obj_name, key_and_value) {
         let cookieString = "";
         Object.entries(key_and_value).forEach(([key, value]) => {
-            cookieString += `${key}:${value}| `;
+            cookieString += `${key}:${value}|`;
         });
         document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
         
@@ -45,7 +45,7 @@ class UtilityFunctions{
     hideElement(targetElement) {
         targetElement.classList.add('d-none');
     };
-    
+
 
     showElement(targetElement) {
         targetElement.classList.remove('d-none');
@@ -126,17 +126,21 @@ document.addEventListener("DOMContentLoaded", function() {
     // Deal with Cookie Creation and Updating
     const cookieObj = {}
 
-    carouselItems.forEach((carouselItem) => {
+    carouselItems.forEach(function(carouselItem) {
         carouselItem.addEventListener('click', function(e) {
             if (e.target.classList.contains('questionnaire-answer-radio')) {
                 let question_id = e.target.getAttribute('data-question-id');
                 let answer_Weighting = e.target.getAttribute('data-answer-weighting');
+
                 
                 cookieObj[question_id] = answer_Weighting;
 
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
                 console.log(document.cookie)
+                answers = utilityFunctions.cookieGetValue("Answers");
+                updateCarouselControls(currentQuestion, answers)
+
                 if (answer_Weighting == 3) {
 
                     window.location.replace(data_home_url);
@@ -149,4 +153,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    function updateCarouselControls(currentQuestion, cookie_values) {
+        // get all items and fiter them so item does not include empty string
+        const list_answers = cookie_values.split('|').filter(item => item !== "");
+
+        const parsedAnswers = list_answers.map(answer => {
+            const [questionId, answerWeighting] = answer.split(":");
+            return { questionId:parseInt(questionId), answerWeighting: parseInt(answerWeighting) };
+        })
+
+        console.log(currentQuestion - 1);
+        console.log(list_answers);
+
+        const currentAnswer = parsedAnswers.find(answer => answer.questionId === currentQuestion);
+        
+
+        if (currentAnswer) {
+            console.log(currentAnswer)
+        } else {
+            console.error("Invalid question index.")
+        }
+    }
 });

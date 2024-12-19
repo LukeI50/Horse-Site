@@ -21,7 +21,7 @@
                         {% for answer in question.answers_list %}
                         <!-- Answer to Question -->
                         <div class="form-check">
-                            <input type="radio" class="form-check-input questionnaire-answer-radio" name="{{question.question_title}}" id="{{question.id}}|{{answer.id}}" data-question-id="{{ question.id }}" data-answer-weighting="{{ answer.weighting }}">
+                            <input type="radio" class="form-check-input questionnaire-answer-radio" name="{{question.question_title}}" id="{{question.id}}|{{answer.id}}" data-question-id="{{ question.id }}" data-answer-weighting="{{ answer.weighting }}" data-answer-result="{{ answer.result }}">
                             <label for="{{question.id}}|{{answer.id}}" class="form-check-label">{{ answer.answer_text }}</label>
                         </div>
                         {% endfor %}

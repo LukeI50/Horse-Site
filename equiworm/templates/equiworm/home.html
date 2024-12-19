@@ -7,11 +7,11 @@
     <div class="row">
         <!----------------------------------------- Left Section -->
         <div class="col-md-4">
-            <div class="card mb-4">
+            <div class="card home-card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title text-center border-bottom">Protect Your Horse. Prevent Resistance. Simplify Worm Control
+                    <h5 class="card-title text-center border-bottom card-h5">Protect Your Horse. Prevent Resistance. Simplify Worm Control
                     </h5>
-                    <p class="card-text text-center">Using the latest <a
+                    <p class="card-text text-center mt-4">Using the latest <a
                             href="https://canterforhorses.org.uk/guidelines/">CANTER Guidelines</a>, our simple and
                         science-backed tool helps
                         you assess your horse's worm risk and decide if treatment is needed—responsibly and effectively.
@@ -23,10 +23,10 @@
 
         <!---------------------------------------- Center Section -->
         <div class="col-md-4">
-            <div class="card mb-4">
+            <div class="card home-card mb-4">
                 <img src="{% static 'images/white_horses.webp' %}" class="card-img-top" alt="Image for center section">
                 <div class="card-body">
-                    <h5 class="card-title text-center border-bottom">Why Responsible Worm Control Matters</h5>
+                    <h5 class="card-title text-center border-bottom card-h5">Why Responsible Worm Control Matters</h5>
                     <p class="card-text text-center">Blanket treatments aren't the answer! Regular, unnecessary
                         deworming can lead
                         to anthelmintic resistance; making treatments less effective over time.
@@ -40,13 +40,13 @@
 
         <!------------------------------------------- Right Section -->
         <div class="col-md-4">
-            <div class="card mb-4">
+            <div class="card home-card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title text-center border-bottom">How Does the Equine Worm Risk Tool Work?</h5>
-                    <p class="card-text text-center">Other info about the site. Other information that could be relevant. Links to
+                    <h5 class="card-title text-center border-bottom card-h5">How Does the Equine Worm Risk Tool Work?</h5>
+                    <p class="card-text text-center mt-4">Other info about the site. Other information that could be relevant. Links to
                         other reputable sites on the subject of Horses, Horse Health, etc.</p>
                 </div>
-                <div class="m-1" style="background-color: #cbc7c7; border-radius: 10px;">
+                <div class="m-1 steps-box">
                     <ol class="m-2">
                         <li>
                             <h5>Answer a Few Simple Questions</h5>
@@ -85,36 +85,5 @@
         </div>
     </div>
 </div>
-
-
-
-<style>
-    .card {
-        height: 100%;
-    }
-
-    h5 {
-        line-height: 1.5;
-        letter-spacing: 1px;
-    }
-
-    /* ol {
-        list-style-type: none;
-        counter-reset: ol-counter;
-        list-style-position: inside;
-    }
-
-    ol li:before {
-        font-size: 15px;
-        content: counter(ol-counter);
-        counter-increment: ol-counter;
-    } */
-
-     ol li::marker {
-        font-size: 1.25rem;
-     }
-</style>
-
-
 
 {% endblock %}

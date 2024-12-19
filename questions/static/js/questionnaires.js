@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 answers = utilityFunctions.cookieGetValue("Answers");
                 updateCarouselControls(currentQuestion, answers)
 
+                // Need to be updated to take accidental selection into account.
                 if (answer_Weighting == 3) {
 
                     window.location.replace(data_home_url);
@@ -153,25 +154,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    function updateCarouselControls(currentQuestion, cookie_values) {
-        // get all items and fiter them so item does not include empty string
-        const list_answers = cookie_values.split('|').filter(item => item !== "");
+    // function updateCarouselControls(currentQuestion, cookie_values) {
+    //     // get all items and fiter them so item does not include empty string
+    //     const list_answers = cookie_values.split('|').filter(item => item !== "");
 
-        const parsedAnswers = list_answers.map(answer => {
-            const [questionId, answerWeighting] = answer.split(":");
-            return { questionId:parseInt(questionId), answerWeighting: parseInt(answerWeighting) };
-        })
+    //     const parsedAnswers = list_answers.map(answer => {
+    //         const [questionId, answerWeighting] = answer.split(":");
+    //         return { questionId:parseInt(questionId), answerWeighting: parseInt(answerWeighting) };
+    //     })
 
-        console.log(currentQuestion - 1);
-        console.log(list_answers);
+    //     console.log(currentQuestion - 1);
+    //     console.log(list_answers);
 
-        const currentAnswer = parsedAnswers.find(answer => answer.questionId === currentQuestion);
-        
+    //     const currentAnswer = parsedAnswers.find(answer => answer.questionId === currentQuestion);
+    //     console.log(parsedAnswers)
 
-        if (currentAnswer) {
-            console.log(currentAnswer)
-        } else {
-            console.error("Invalid question index.")
-        }
-    }
+    //     if (currentAnswer) {
+    //         console.log(currentAnswer)
+    //     } else {
+    //         console.error("Invalid question index.")
+    //     }
+    // }
 });

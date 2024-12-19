@@ -7,24 +7,24 @@
     <div class="row">
         <!----------------------------------------- Left Section -->
         <div class="col-md-4">
-            <div class="card home-card mb-4">
+            <div class="card  home-card">
                 <div class="card-body">
                     <h5 class="card-title text-center border-bottom card-h5">Protect Your Horse. Prevent Resistance. Simplify Worm Control
                     </h5>
                     <p class="card-text text-center mt-4">Using the latest <a
-                            href="https://canterforhorses.org.uk/guidelines/">CANTER Guidelines</a>, our simple and
+                            href="https://canterforhorses.org.uk/guidelines/" target="_blank" >CANTER Guidelines</a>, our simple and
                         science-backed tool helps
                         you assess your horse's worm risk and decide if treatment is needed—responsibly and effectively.
                     </p>
                 </div>
-                <img src="{% static 'images/white_horses.webp' %}" class="card-img-bottom" alt="Image for left section">
+                <img src="{% static 'images/donkey.jpg' %}" class="card-img-bottom" alt="Image for left section">
             </div>
         </div>
 
         <!---------------------------------------- Center Section -->
         <div class="col-md-4">
-            <div class="card home-card mb-4">
-                <img src="{% static 'images/white_horses.webp' %}" class="card-img-top" alt="Image for center section">
+            <div class="card home-card">
+                <img src="{% static 'images/twohorsedfield.jpg' %}" class="card-img-top" alt="Image for center section">
                 <div class="card-body">
                     <h5 class="card-title text-center border-bottom card-h5">Why Responsible Worm Control Matters</h5>
                     <p class="card-text text-center">Blanket treatments aren't the answer! Regular, unnecessary
@@ -40,46 +40,88 @@
 
         <!------------------------------------------- Right Section -->
         <div class="col-md-4">
-            <div class="card home-card mb-4">
+            <div class="card  home-card">
                 <div class="card-body">
                     <h5 class="card-title text-center border-bottom card-h5">How Does the Equine Worm Risk Tool Work?</h5>
-                    <p class="card-text text-center mt-4">Other info about the site. Other information that could be relevant. Links to
-                        other reputable sites on the subject of Horses, Horse Health, etc.</p>
+                    <p class="card-text text-center mt-4">The Equine Worm Risk Tool helps horse owners assess worm infestation risks by asking questions about grazing, worming history, and pasture management. It then provides tailored advice on whether testing or treatment is needed, promoting responsible parasite management.</p>
                 </div>
-                <div class="m-1 steps-box">
-                    <ol class="m-2">
-                        <li>
-                            <h5>Answer a Few Simple Questions</h5>
-                            <p>Tell us about your horse: age, grazing habits, recent worm history, and pasture
-                                management.</p>
-                        </li>
-                        <li>
-                            <h5>Receive a Personalised Risk Assessment</h5>
-                            <p>We’ll analyse your answers based on the <strong>CANTER Guidelines</strong> to determine
-                                if treatment is
-                                needed.</p>
-                        </li>
-                        <li>
-                            <h5>Take Action: The Smart Way</h5>
-                            <p>Get tailored advice to help you decide whether to test or treat, ensuring you act
-                                responsibly for your horse’s health.</p>
-                        </li>
-                    </ol>
-                </div>
-                <!-- <img src="{% static 'images/white_horses.webp' %}" class="card-img-top" alt="Image for right section"> -->
+                <img src="{% static 'images/twohorses.jpg' %}" class="card-img-top" alt="Image for right section">
             </div>
         </div>
     </div>
 
+    <!------------------------------------------------ Timeline section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">How it works</h2>
+    
+        <div class="timeline">
+            <!-- Item 1 (Left) -->
+            <div class="timeline-item">
+                <div class="timeline-content-right">
+                    <div class="card">
+                        <h5>Answer a Few Simple Questions</h5>
+                        <p>Tell us about your horse: age, grazing habits, recent worm history, and pasture management.</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <i class="bi bi-pencil-square"></i> 
+                </div>
+                <div class="timeline-content-left"></div>
+            </div>
+    
+            <!-- Item 2 (Right) -->
+            <div class="timeline-item">
+                <div class="timeline-content-right">
+                    <div class="card">
+                        <h5>Receive a Personalised Risk Assessment</h5>
+                        <p>We’ll analyse your answers based on the <a
+                            href="https://canterforhorses.org.uk/guidelines/" target="_blank" >CANTER Guidelines</a> to determine if treatment is needed.</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <i class="bi bi-phone"></i> 
+                </div>
+                <div class="timeline-content-left"></div>
+            </div>
+    
+            <!-- Item 3 (Left) -->
+            <div class="timeline-item">
+                <div class="timeline-content-right">
+                    <div class="card">
+                        <h5>Take Action: The Smart Way</h5>
+                        <p>Get tailored advice to help you decide whether to test or treat, ensuring you act responsibly for your horse’s health.</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="timeline-content-left"></div>
+            </div>
+    
+            <!-- Item 4 (Right) -->
+            <!-- <div class="timeline-item">
+                <div class="timeline-content-right">
+                    <div class="card">
+                        <h5>Study equipment delivery</h5>
+                        <p>We'll send you everything you need to complete the study, all free.</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <i class="bi bi-cart"></i> <!-- Example icon -->
+                <!-- </div>
+                <div class="timeline-content-left"></div>
+            </div>
+        </div>
+    </div> --> 
     <!------------------------------------------- Risk Assessment Section -->
     <div class="text-center mt-5">
-        <div class="card p-4">
+        <div class="card pt-6">
             <h5 class="card-title">Take the Guesswork Out of Worm Control</h5>
             <p class="card-text">Protect your horse, your pasture, and the environment. Try the Equine Worm Risk Tool
                 today. It’s quick, free, and backed by science.
             </p>
             <div class="d-flex justify-content-center">
-                <a href="{% url 'questionnaire_view' 'check-worm-risk' %}" class=" btn btn-sm form-btn ">Start Your Free
+                <a href="{% url 'questionnaire_view' 'check-worm-risk' %}" class=" btn btn-md form-btn ">Start Your Free
                     Worm Risk Check</a>
             </div>
         </div>

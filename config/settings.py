@@ -41,7 +41,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['https://*.herokuapp.com',
+ALLOWED_HOSTS = ['.herokuapp.com',
                 '127.0.0.1',
                 '8000-lukei50-horsesite-8mvvcyorgah.ws.codeinstitute-ide.net',
                 '8000-lukei50-horsesite-vuelo2zgl80.ws.codeinstitute-ide.net'

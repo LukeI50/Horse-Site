@@ -63,6 +63,7 @@ class Answer(models.Model):
     answer_text = models.CharField(max_length=256)
     weighting = models.IntegerField(default=0)
     result = models.TextField(null=True)
+    advice = models.TextField(null=True)
 
     def __str__(self):
         return self.answer_text

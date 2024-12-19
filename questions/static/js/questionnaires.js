@@ -28,9 +28,9 @@ class UtilityFunctions{
         let cookie_list = cookie_string.split("|");
 
         for (let index = 0; index < cookie_list.length; index++) {
-            cookie_list[index] = cookie_list[index].split(",");
-            if (cookie_list[index][0] != ""){
-                parsedObj[cookie_list[index][0]] = [parseInt(cookie_list[index][1]), cookie_list[index][2]];
+            let answer_list = cookie_list[index].split(",");
+            if (answer_list[0] != ""){
+                parsedObj[answer_list[0]] = [parseInt(answer_list[1])].concat(answer_list.slice(2));
             }
         }
 
@@ -150,9 +150,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 let question_id = e.target.getAttribute('data-question-id');
                 let answer_weighting = e.target.getAttribute('data-answer-weighting');
                 let answer_result = e.target.getAttribute('data-answer-result')
+                let answer_advice = e.target.getAttribute('data-answer-advice')
 
                 
-                cookieObj[question_id] = [answer_weighting, answer_result];
+                cookieObj[question_id] = [answer_weighting, answer_result, answer_advice];
 
                 utilityFunctions.cookieCreateFromObj("Answers", cookieObj);
 
@@ -197,6 +198,7 @@ function end_button(event) {
             htmlString += `
             <div class="card col-sm" style="background: ${colors[value[0]]}; padding-inline:10px;">
                 <p class="card=text">${value[1]}</p>
+                <p class="card=text">${value[2]}</p>
             </div>
             `;
         }

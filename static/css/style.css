@@ -18,12 +18,14 @@ body {
     padding: 0;
 }
 
-h2 {
-    color: #7D7874;
+/* text styling */
+
+h2, h5, .card-title {
+    color: #7D7874 !important;
 }
 
-p .values-list {
-    color: #7A371A;
+p, .values-list, li {
+    color: black;
 }
 
 /*Navbar style*/
@@ -105,7 +107,7 @@ p .values-list {
 
 .form-btn {
     background-color: #b6cd5b;
-    color: #7A371A;
+    color: black;
     width: 30%;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
@@ -139,14 +141,14 @@ p .values-list {
 
 
 .about-img {
-    border-radius: 10px;
-    box-shadow: 0px 10px 15px rgba(125, 120, 116, 0.4);
+    padding-bottom: 10px;
 
 }
 
 /* Home Page Cards */
 .home-card {
-    height: 100%;
+    height: 92%;
+    padding: .5rem;
 }
 
 .card-h5 {
@@ -163,3 +165,89 @@ ol li::marker {
     background-color: #cbc7c7; 
     border-radius: 10px;
 }
+
+/* TimeLine*/
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Line connecting the timeline items */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: calc(100% / 4 * 3); /* Adjust the height of the line */
+    width: 2px;
+    background-color: #7A371A;
+    transform: translateX(-50%);
+}
+
+/* Styling for each timeline item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+/* Alternate left and right positioning of timeline items */
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse; /* For odd items, position to the right */
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row; /* For even items, position to the left */
+}
+
+/* Content on the left side of the timeline */
+.timeline-item .timeline-content-left {
+    flex: 1;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/* Content on the right side of the timeline */
+.timeline-item .timeline-content-right {
+    flex: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
+}
+
+/* Icon styling */
+.timeline-icon {
+    background-color: #7A371A;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Styling for cards */
+.card {
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure cards take full width */
+}
+
+/* Spacing for timeline item content */
+.timeline-item .timeline-content {
+    font-size: 16px;
+}
+

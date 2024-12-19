@@ -18,11 +18,13 @@ body {
     padding: 0;
 }
 
-h2 {
-    color: #7D7874;
+/* text styling */
+
+h2, .card-title {
+    color: #7D7874 !important;
 }
 
-p .values-list {
+p, .values-list, li {
     color: #7A371A;
 }
 

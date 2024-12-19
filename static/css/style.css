@@ -151,6 +151,10 @@ p, .values-list, li {
     padding: .5rem;
 }
 
+.home-card img {
+    margin-bottom: 1rem;
+}
+
 .card-h5 {
     line-height: 1.5;
     letter-spacing: 1px;

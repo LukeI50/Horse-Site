@@ -178,7 +178,7 @@ function end_button(event) {
     if(results_area.length === 0) {
         results_area = utilityFunctions.elementCreate(
             "div",
-            ["results-area", "row"],
+            ["results-area", "row", "justify-content-center"],
             "Results Area",
         )
         main_area[0].appendChild(results_area)
@@ -197,7 +197,7 @@ function end_button(event) {
         if (value[0] > 0)
         {
             htmlString += `
-            <div class="card col-3" style="background: ${colors[value[0]]};">
+            <div class="card col-12 col-sm-6 col-md-3 col-xl-2" style="background: ${colors[value[0]]}; margin:10px;">
                 <ul class="list-group list-group-flush" style="background:inherit;">
                     <li class="list-group-item" style="background:inherit;">${value[1]}</p>
                     <li class="list-group-item" style="background:inherit;">Advice: ${value[2]}</p>

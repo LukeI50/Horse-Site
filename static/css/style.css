@@ -194,138 +194,132 @@ ol li::marker {
     border-radius: 10px;
 }
 
-/* TimeLine*/
-
+/* The actual timeline (the vertical ruler) */
 .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #DED6CB;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #DED6CB;
+  border: 4px solid #7A371A;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #DED6CB;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #DED6CB;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #DED6CB;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #DED6CB transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -12px;
+}
+
+.left::after {
+    right: -12px;
+  }
+
+/* The actual content */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #DED6CB;
     position: relative;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    border-radius: 6px;
+    box-shadow: 2px 4px 8px rgba(122, 55, 26, 0.4); 
+  }
 
-/* Line connecting the timeline items */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    height: calc(100% / 4 * 3); /* Adjust the height of the line */
-    width: 2px;
-    background-color: #7A371A;
-    transform: translateX(-50%);
-}
-
-/* Styling for each timeline item */
-.timeline-item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 50px;
-    justify-content: center;
-}
-
-/* Alternate left and right positioning of timeline items */
-.timeline-item:nth-child(even) {
-    flex-direction: row-reverse; /* For odd items, position to the right */
-}
-
-.timeline-item:nth-child(odd) {
-    flex-direction: row; /* For even items, position to the left */
-}
-
-/* Content on the left side of the timeline */
-.timeline-item .timeline-content-left {
-    flex: 1;
-    padding-right: 20px;
-    text-align: right;
-}
-
-/* Content on the right side of the timeline */
-.timeline-item .timeline-content-right {
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
     
-
-    flex: 1;
-    padding-left: 40px;
-    padding-right: 40px; 
-    text-align: left;
-}
-
-/* Icon styling */
-.timeline-icon {
-    background-color: #7A371A;
-    color: white;
-    border-radius: 50%;
-    padding: 20px;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-/* Styling for cards */
-.timeline-card {
-    margin-top: 15px;
-    padding: 20px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-/* Spacing for timeline item content */
-.timeline-item .timeline-content {
-    font-size: 16px;
-}
-
-/* Adjustments for Small Screens (below 576px) */
-@media (max-width: 576px) {
-
+    /* Full-width containers */
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
     
-.navbar-brand {
-padding-left: 0;
-    }
-
-
-    /* Adjust the line to the left */
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .timeline::before {
-        left: 10%; 
-        transform: translateX(0); 
-    }
-
-    /* Ensure timeline items are vertically aligned on small screens */
-    .timeline-item {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    /* Adjust the cards for left alignment */
-    .timeline-item .timeline-content-left,
-    .timeline-item .timeline-content-right {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    /* Ensure icons and cards align properly */
-    .timeline-item .timeline-icon {
-        position: static;
-        margin-bottom: 15px;
-    }
-
-    /* Ensure the cards are aligned to the left */
-    .timeline-item .timeline-card {
-        width: 90%; /* Reduce width for better alignment */
-    }
-
-    /* Remove padding from navbar/logo */
-    .navbar-brand {
-        padding-left: 0 !important;
-    }
+    /* Make sure that all arrows are pointing leftwards */
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid #DED6CB;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #DED6CB transparent transparent;
+      }
+    
+    /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+        left: 18px;
+      }
+    
+    /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
 }

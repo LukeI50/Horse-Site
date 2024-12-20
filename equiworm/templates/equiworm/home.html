@@ -19,14 +19,14 @@
                         you assess your horse's worm risk and decide if treatment is needed—responsibly and effectively.
                     </p>
                 </div>
-                <img src="{% static 'images/donkey.jpg' %}" class="card-img-bottom" alt="Image for left section">
+                <img src="{% static 'images/Horse.jpg' %}" class="card-img-bottom" alt="Image for left section">
             </div>
         </div>
 
         <!---------------------------------------- Center Section -->
         <div class="col-md-4">
             <div class="card home-card">
-                <img src="{% static 'images/twohorsedfield.jpg' %}" class="card-img-top" alt="Image for center section">
+                <img src="{% static 'images/Donkey.jpg' %}" class="card-img-top" alt="Image for center section">
                 <div class="card-body">
                     <h5 class="card-title text-center border-bottom card-h5">Why Responsible Worm Control Matters</h5>
                     <p class="card-text text-center">Blanket treatments aren't the answer! Regular, unnecessary
@@ -51,11 +51,24 @@
                         then provides tailored advice on whether testing or treatment is needed, promoting responsible
                         parasite management.</p>
                 </div>
-                <img src="{% static 'images/twohorses.jpg' %}" class="card-img-top" alt="Image for right section">
+                <img src="{% static 'images/Pony.jpg' %}" class="card-img-top" alt="Image for right section">
             </div>
         </div>
     </div>
 
+    <!------------------------------------------- Risk Assessment Section -->
+    <div class="text-center mt-5">
+        <div class="card pt-6">
+            <h5 class="card-title">Take the Guesswork Out of Worm Control</h5>
+            <p class="card-text">Protect your horse, your pasture, and the environment. Try the Equine Worm Risk Tool
+                today. It’s quick, free, and backed by science.
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'questionnaire_view' 'check-worm-risk' %}" class=" btn btn-md form-btn ">Start Your Free
+                    Worm Risk Check</a>
+            </div>
+        </div>
+    </div> 
     <!------------------------------------------------ Timeline section -->
     <div class="container mt-5">
         <h2 class="text-center mb-5">How it works</h2>
@@ -89,7 +102,7 @@
         </div>
 
         <!------------------------------------------- Risk Assessment Section -->
-        <div class="text-center mt-5">
+        <!-- <div class="text-center mt-5">
             <div class="card pt-6">
                 <h5 class="card-title">Take the Guesswork Out of Worm Control</h5>
                 <p class="card-text">Protect your horse, your pasture, and the environment. Try the Equine Worm Risk
@@ -102,6 +115,6 @@
                         Worm Risk Check</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         {% endblock %}
